@@ -16,3 +16,6 @@ func _on_clicker_button_pressed() -> void:
 func _on_timer_timeout() -> void:
 	Global.money += Global.moneyPerSecond
 	$Control/LabelMoney.text = 'Money: ' + str(Global.money)
+
+func _on_close_shop_button_pressed() -> void:
+	$Control/MenuBar.hide()

@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://w0o7ff6d4mia"]
+[gd_scene load_steps=9 format=3 uid="uid://w0o7ff6d4mia"]
 
 [ext_resource type="Script" uid="uid://bl2ydu4ly3sj3" path="res://Script/Game.gd" id="1_mopgc"]
 [ext_resource type="Texture2D" uid="uid://cou2d8hv2dpjy" path="res://Assets/Background/SakuraBG.png" id="2_ivtx6"]
 [ext_resource type="Texture2D" uid="uid://bmocm8505n7pn" path="res://Assets/ButtonClick/Rumi1.png" id="3_3xgnh"]
 [ext_resource type="Texture2D" uid="uid://feg3647siraj" path="res://Assets/ButtonClick/Rumi2.png" id="4_48ymf"]
+[ext_resource type="Texture2D" uid="uid://dd183xsqhm01k" path="res://Assets/Texture/ShopBG.png" id="5_3xgnh"]
+[ext_resource type="Texture2D" uid="uid://bnw4n0koodce0" path="res://Assets/Texture/CloseButton.png" id="6_48ymf"]
+[ext_resource type="Texture2D" uid="uid://c5tiqxwpkarxy" path="res://Assets/Texture/CloseButton2.png" id="7_48ymf"]
+[ext_resource type="Texture2D" uid="uid://cxmgwvop0qqc" path="res://Assets/Texture/CloseButton3.png" id="8_cohtu"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_mopgc")
@@ -43,8 +47,6 @@ stretch_mode = 5
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_left = -113.5
-offset_right = 73.5
 offset_bottom = 96.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -58,9 +60,7 @@ horizontal_alignment = 1
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_left = -104.5
 offset_top = 96.011
-offset_right = 64.5
 offset_bottom = 131.011
 grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -70,8 +70,38 @@ theme_override_font_sizes/font_size = 25
 text = "(clicksPerSecond)"
 horizontal_alignment = 1
 
+[node name="MenuBar" type="MenuBar" parent="Control"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Control/MenuBar"]
+position = Vector2(-320, 10)
+texture = ExtResource("5_3xgnh")
+centered = false
+
+[node name="CloseShopButton" type="TextureButton" parent="Control/MenuBar"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -65.0
+offset_top = 5.0
+offset_right = -4.999935
+offset_bottom = 65.000015
+grow_horizontal = 0
+pivot_offset = Vector2(30, 30)
+texture_normal = ExtResource("6_48ymf")
+texture_pressed = ExtResource("7_48ymf")
+texture_hover = ExtResource("8_cohtu")
+
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
 [connection signal="pressed" from="Control/ClickerButton" to="." method="_on_clicker_button_pressed"]
+[connection signal="pressed" from="Control/MenuBar/CloseShopButton" to="." method="_on_close_shop_button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

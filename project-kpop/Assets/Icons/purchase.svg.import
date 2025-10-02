@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cly0w4xt3rs3k"
-path="res://.godot/imported/SakuraBG.png-34e57311541381193bfd8ca6425921d6.ctex"
+uid="uid://b083llcmbnm5h"
+path="res://.godot/imported/purchase.svg-6f663a82743a947bb9a4cbeca3c44264.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SakuraBG.png"
-dest_files=["res://.godot/imported/SakuraBG.png-34e57311541381193bfd8ca6425921d6.ctex"]
+source_file="res://Assets/Icons/purchase.svg"
+dest_files=["res://.godot/imported/purchase.svg-6f663a82743a947bb9a4cbeca3c44264.ctex"]
 
 [params]
 
@@ -38,3 +38,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

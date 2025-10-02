@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bmocm8505n7pn"
-path="res://.godot/imported/Rumi1.png-5d39cbd7b7a6a96df81cc4d4bd064a2a.ctex"
+path="res://.godot/imported/Rumi1.png-d664cb3f924690b57fd4d58f95b0fe98.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Rumi1.png"
-dest_files=["res://.godot/imported/Rumi1.png-5d39cbd7b7a6a96df81cc4d4bd064a2a.ctex"]
+source_file="res://Assets/ButtonClick/Rumi1.png"
+dest_files=["res://.godot/imported/Rumi1.png-d664cb3f924690b57fd4d58f95b0fe98.ctex"]
 
 [params]
 

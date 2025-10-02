@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjiwa6w5p453r"]
+
+[ext_resource type="Script" uid="uid://dpxlm4twqw82p" path="res://Script/Click_msg.gd" id="1_a6hln"]
+
+[node name="ClickMsg" type="Node2D"]
+script = ExtResource("1_a6hln")
+
+[node name="LabelAmount" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0

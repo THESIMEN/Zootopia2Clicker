@@ -1,56 +1,77 @@
 [gd_scene load_steps=5 format=3 uid="uid://w0o7ff6d4mia"]
 
-[ext_resource type="Script" uid="uid://cq3v13d1f2u7j" path="res://Script/game.gd" id="1_4jv7b"]
-[ext_resource type="Texture2D" uid="uid://cly0w4xt3rs3k" path="res://Assets/SakuraBG.png" id="2_03iqk"]
-[ext_resource type="Texture2D" uid="uid://bmocm8505n7pn" path="res://Assets/Rumi1.png" id="3_ihreq"]
-[ext_resource type="Texture2D" uid="uid://feg3647siraj" path="res://Assets/Rumi2.png" id="4_03iqk"]
+[ext_resource type="Script" uid="uid://bl2ydu4ly3sj3" path="res://Script/Game.gd" id="1_mopgc"]
+[ext_resource type="Texture2D" uid="uid://cou2d8hv2dpjy" path="res://Assets/Background/SakuraBG.png" id="2_ivtx6"]
+[ext_resource type="Texture2D" uid="uid://bmocm8505n7pn" path="res://Assets/ButtonClick/Rumi1.png" id="3_3xgnh"]
+[ext_resource type="Texture2D" uid="uid://feg3647siraj" path="res://Assets/ButtonClick/Rumi2.png" id="4_48ymf"]
 
-[node name="Game" type="Control"]
+[node name="Game" type="Node2D"]
+script = ExtResource("1_mopgc")
+
+[node name="UI" type="CanvasLayer" parent="."]
+layer = -5
+
+[node name="BG" type="Sprite2D" parent="UI"]
+texture = ExtResource("2_ivtx6")
+centered = false
+
+[node name="Control" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("1_4jv7b")
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
 
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_03iqk")
-expand_mode = 1
-
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="ClickerButton" type="TextureButton" parent="Control"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -91.25
-offset_top = -67.82999
-offset_right = 88.75
-offset_bottom = 332.1709
+offset_left = -133.0
+offset_top = -106.0
+offset_right = 93.0
+offset_bottom = 321.00043
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = ExtResource("3_ihreq")
-texture_pressed = ExtResource("4_03iqk")
+texture_normal = ExtResource("3_3xgnh")
+texture_pressed = ExtResource("4_48ymf")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="."]
+[node name="LabelMoney" type="Label" parent="Control"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 23.0
+offset_left = -113.5
+offset_right = 73.5
+offset_bottom = 96.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 70
-text = "Сумма:"
+text = "(money)"
 horizontal_alignment = 1
+
+[node name="LabelMoneyPerSecond" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -104.5
+offset_top = 96.011
+offset_right = 64.5
+offset_bottom = 131.011
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 25
+text = "(clicksPerSecond)"
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="pressed" from="Control/ClickerButton" to="." method="_on_clicker_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://w0o7ff6d4mia"]
+[gd_scene load_steps=12 format=3 uid="uid://w0o7ff6d4mia"]
 
 [ext_resource type="Script" uid="uid://bl2ydu4ly3sj3" path="res://Script/Game.gd" id="1_mopgc"]
 [ext_resource type="Texture2D" uid="uid://cou2d8hv2dpjy" path="res://Assets/Background/SakuraBG.png" id="2_ivtx6"]
@@ -8,6 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://bnw4n0koodce0" path="res://Assets/Texture/CloseButton.png" id="6_48ymf"]
 [ext_resource type="Texture2D" uid="uid://c5tiqxwpkarxy" path="res://Assets/Texture/CloseButton2.png" id="7_48ymf"]
 [ext_resource type="Texture2D" uid="uid://cxmgwvop0qqc" path="res://Assets/Texture/CloseButton3.png" id="8_cohtu"]
+[ext_resource type="Texture2D" uid="uid://bt0tbg0ayvk7s" path="res://Assets/Texture/ShopOpen.png" id="9_tujvx"]
+[ext_resource type="Texture2D" uid="uid://bq46jvano5ojn" path="res://Assets/Texture/ShopOpen2.png" id="10_2j816"]
+[ext_resource type="PackedScene" uid="uid://y4ytxf16qjye" path="res://Scene/Shop.tscn" id="11_g3fkh"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_mopgc")
@@ -70,7 +73,21 @@ theme_override_font_sizes/font_size = 25
 text = "(clicksPerSecond)"
 horizontal_alignment = 1
 
-[node name="MenuBar" type="MenuBar" parent="Control"]
+[node name="ShopButton" type="TextureButton" parent="Control"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -130.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 130.0
+grow_horizontal = 0
+texture_normal = ExtResource("9_tujvx")
+texture_hover = ExtResource("10_2j816")
+
+[node name="MenuShop" type="MenuBar" parent="Control"]
+visible = false
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -79,12 +96,12 @@ offset_left = -40.0
 offset_bottom = 40.0
 grow_horizontal = 0
 
-[node name="Sprite2D" type="Sprite2D" parent="Control/MenuBar"]
+[node name="Sprite2D" type="Sprite2D" parent="Control/MenuShop"]
 position = Vector2(-320, 10)
 texture = ExtResource("5_3xgnh")
 centered = false
 
-[node name="CloseShopButton" type="TextureButton" parent="Control/MenuBar"]
+[node name="CloseShopButton" type="TextureButton" parent="Control/MenuShop"]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -99,9 +116,13 @@ texture_normal = ExtResource("6_48ymf")
 texture_pressed = ExtResource("7_48ymf")
 texture_hover = ExtResource("8_cohtu")
 
+[node name="Shop" parent="Control/MenuShop" instance=ExtResource("11_g3fkh")]
+position = Vector2(-315, 75)
+
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
 [connection signal="pressed" from="Control/ClickerButton" to="." method="_on_clicker_button_pressed"]
-[connection signal="pressed" from="Control/MenuBar/CloseShopButton" to="." method="_on_close_shop_button_pressed"]
+[connection signal="pressed" from="Control/ShopButton" to="." method="_on_shop_button_pressed"]
+[connection signal="pressed" from="Control/MenuShop/CloseShopButton" to="." method="_on_close_shop_button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

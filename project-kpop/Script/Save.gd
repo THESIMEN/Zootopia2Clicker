@@ -1,6 +1,6 @@
 extends Node
 
-var savePath = "res://GameSaves/save-file.cfg"
+var savePath = "res://GameSaves/Save-file.cfg"
 var config = ConfigFile.new()
 var loadRespone = config.load(savePath)
 

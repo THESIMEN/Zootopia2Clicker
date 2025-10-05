@@ -1,21 +1,22 @@
-[gd_scene load_steps=17 format=3 uid="uid://w0o7ff6d4mia"]
+[gd_scene load_steps=18 format=3 uid="uid://d1wigo34absfm"]
 
-[ext_resource type="Script" uid="uid://bl2ydu4ly3sj3" path="res://Script/Game.gd" id="1_mopgc"]
+[ext_resource type="Script" path="res://Script/Game.gd" id="1_mopgc"]
 [ext_resource type="Texture2D" uid="uid://cou2d8hv2dpjy" path="res://Assets/Background/SakuraBG.png" id="2_ivtx6"]
 [ext_resource type="Texture2D" uid="uid://bmocm8505n7pn" path="res://Assets/ButtonClick/Rumi1.png" id="3_3xgnh"]
 [ext_resource type="Texture2D" uid="uid://feg3647siraj" path="res://Assets/ButtonClick/Rumi2.png" id="4_48ymf"]
 [ext_resource type="Texture2D" uid="uid://dd183xsqhm01k" path="res://Assets/Texture/ShopBG.png" id="5_3xgnh"]
-[ext_resource type="Texture2D" uid="uid://bnw4n0koodce0" path="res://Assets/Texture/CloseButton.png" id="6_48ymf"]
-[ext_resource type="Texture2D" uid="uid://c5tiqxwpkarxy" path="res://Assets/Texture/CloseButton2.png" id="7_48ymf"]
-[ext_resource type="Texture2D" uid="uid://cxmgwvop0qqc" path="res://Assets/Texture/CloseButton3.png" id="8_cohtu"]
+[ext_resource type="Texture2D" uid="uid://dokk6s7fqmdh4" path="res://Assets/Texture/ShopOpenButton1Normal.png" id="5_bxrg2"]
+[ext_resource type="Texture2D" uid="uid://7mjtwpr44l8f" path="res://Assets/Texture/ShopOpenButton2Pressed.png" id="6_ilbig"]
+[ext_resource type="Texture2D" uid="uid://tuiiju4u1k42" path="res://Assets/Texture/ShopOpenButton3Hover.png" id="7_kfjtm"]
 [ext_resource type="Texture2D" uid="uid://ccnk2ixd5dqjp" path="res://Assets/Texture/MoneyPerClickButton2Pressed.png" id="9_aawhf"]
-[ext_resource type="Texture2D" uid="uid://bt0tbg0ayvk7s" path="res://Assets/Texture/ShopOpen.png" id="9_tujvx"]
-[ext_resource type="Texture2D" uid="uid://bq46jvano5ojn" path="res://Assets/Texture/ShopOpen2.png" id="10_2j816"]
 [ext_resource type="PackedScene" uid="uid://y4ytxf16qjye" path="res://Scene/ShopPerSecond.tscn" id="11_g3fkh"]
 [ext_resource type="Texture2D" uid="uid://dbxhyprcm2rix" path="res://Assets/Texture/MoneyPerSecondButton2Pressed.png" id="11_kcbv6"]
 [ext_resource type="Texture2D" uid="uid://4r4ew8ct8vg2" path="res://Assets/Texture/MoneyPerClickButton1Normal.png" id="11_nspe4"]
 [ext_resource type="Texture2D" uid="uid://w70upji1nifm" path="res://Assets/Texture/MoneyPerSecondButton1Normal.png" id="12_aawhf"]
+[ext_resource type="Texture2D" uid="uid://6j8sdupkal5c" path="res://Assets/Texture/CloseButton1Normal.png" id="13_bxrg2"]
+[ext_resource type="Texture2D" uid="uid://bar1hj16gwt5o" path="res://Assets/Texture/CloseButton2Pressed.png" id="14_ilbig"]
 [ext_resource type="PackedScene" uid="uid://dhsusta606ic" path="res://Scene/ShopPerClick.tscn" id="15_bxrg2"]
+[ext_resource type="Texture2D" uid="uid://d08bsqsggifbb" path="res://Assets/Texture/CloseButton3Hover.png" id="15_kfjtm"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_mopgc")
@@ -88,8 +89,9 @@ offset_top = 10.0
 offset_right = -10.0
 offset_bottom = 130.0
 grow_horizontal = 0
-texture_normal = ExtResource("9_tujvx")
-texture_hover = ExtResource("10_2j816")
+texture_normal = ExtResource("5_bxrg2")
+texture_pressed = ExtResource("6_ilbig")
+texture_hover = ExtResource("7_kfjtm")
 
 [node name="MenuShop" type="MenuBar" parent="Control"]
 layout_mode = 1
@@ -184,9 +186,9 @@ offset_right = 5.0
 offset_bottom = 55.000015
 grow_horizontal = 0
 pivot_offset = Vector2(30, 30)
-texture_normal = ExtResource("6_48ymf")
-texture_pressed = ExtResource("7_48ymf")
-texture_hover = ExtResource("8_cohtu")
+texture_normal = ExtResource("13_bxrg2")
+texture_pressed = ExtResource("14_ilbig")
+texture_hover = ExtResource("15_kfjtm")
 stretch_mode = 3
 
 [node name="ShopPerClick" parent="Control/MenuShop" instance=ExtResource("15_bxrg2")]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bq46jvano5ojn"
-path="res://.godot/imported/ShopOpen2.png-b714a1c4fe76338fbd25921015310a27.ctex"
+uid="uid://bar1hj16gwt5o"
+path="res://.godot/imported/CloseButton2Pressed.png-a64449cf7c9a0cf46c32bf469e128bbe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Texture/ShopOpen2.png"
-dest_files=["res://.godot/imported/ShopOpen2.png-b714a1c4fe76338fbd25921015310a27.ctex"]
+source_file="res://Assets/Texture/CloseButton2Pressed.png"
+dest_files=["res://.godot/imported/CloseButton2Pressed.png-a64449cf7c9a0cf46c32bf469e128bbe.ctex"]
 
 [params]
 

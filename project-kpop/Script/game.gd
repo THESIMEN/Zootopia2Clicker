@@ -27,3 +27,13 @@ func _on_close_shop_button_pressed() -> void:
 func _on_shop_button_pressed() -> void:
 	$Control/ShopButton.hide()
 	$Control/MenuShop.show()
+
+
+func _on_money_per_click_button_pressed() -> void:
+	$Control/MenuShop/ShopPerClick.show()
+	$Control/MenuShop/ShopPerSecond.hide()
+
+
+func _on_money_per_second_button_pressed() -> void:
+	$Control/MenuShop/ShopPerSecond.show()
+	$Control/MenuShop/ShopPerClick.hide()

@@ -1,0 +1,93 @@
+[gd_scene load_steps=3 format=3 uid="uid://y4ytxf16qjye"]
+
+[ext_resource type="Texture2D" uid="uid://bltnek1hw4dgq" path="res://Assets/Texture/ShopPlank.png" id="1_685uj"]
+[ext_resource type="Script" uid="uid://dhrr07kh7fdg4" path="res://Script/ShopPerSecond.gd" id="1_kol6x"]
+
+[node name="ShopPerSecond" type="Node2D"]
+script = ExtResource("1_kol6x")
+
+[node name="Scroll" type="ScrollContainer" parent="."]
+offset_right = 350.0
+offset_bottom = 596.0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="Box" type="VBoxContainer" parent="Scroll"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="Scroll/Box"]
+layout_mode = 2
+texture_normal = ExtResource("1_685uj")
+
+[node name="LabelPrice" type="Label" parent="Scroll/Box/TextureButton"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 67.0
+offset_bottom = 39.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 24
+text = "Цена"
+
+[node name="Label" type="Label" parent="Scroll/Box/TextureButton"]
+layout_mode = 1
+offset_left = 249.0
+offset_top = 81.0
+offset_right = 331.0
+offset_bottom = 115.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 24
+text = "+1 /сек"
+
+[node name="LabelLVL" type="Label" parent="Scroll/Box/TextureButton"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 81.0
+offset_right = 46.0
+offset_bottom = 115.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 24
+text = "LVL"
+
+[node name="TextureButton2" type="TextureButton" parent="Scroll/Box"]
+layout_mode = 2
+texture_normal = ExtResource("1_685uj")
+
+[node name="LabelPrice" type="Label" parent="Scroll/Box/TextureButton2"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 67.0
+offset_bottom = 39.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 24
+text = "Цена"
+
+[node name="Label" type="Label" parent="Scroll/Box/TextureButton2"]
+layout_mode = 1
+offset_left = 249.0
+offset_top = 81.0
+offset_right = 331.0
+offset_bottom = 115.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 24
+text = "+5 /сек"
+
+[node name="LabelLVL" type="Label" parent="Scroll/Box/TextureButton2"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 81.0
+offset_right = 46.0
+offset_bottom = 115.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 24
+text = "LVL"
+
+[connection signal="pressed" from="Scroll/Box/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="Scroll/Box/TextureButton2" to="." method="_on_texture_button_2_pressed"]

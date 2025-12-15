@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://d1wigo34absfm"]
 
-[ext_resource type="Script" path="res://Script/Game.gd" id="1_mopgc"]
+[ext_resource type="Script" uid="uid://di4emqfi2egv4" path="res://Script/Game.gd" id="1_mopgc"]
 [ext_resource type="Texture2D" uid="uid://cou2d8hv2dpjy" path="res://Assets/Background/SakuraBG.png" id="2_ivtx6"]
 [ext_resource type="Texture2D" uid="uid://bmocm8505n7pn" path="res://Assets/ButtonClick/Rumi1.png" id="3_3xgnh"]
 [ext_resource type="Texture2D" uid="uid://feg3647siraj" path="res://Assets/ButtonClick/Rumi2.png" id="4_48ymf"]

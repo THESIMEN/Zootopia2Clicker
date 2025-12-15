@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://y4ytxf16qjye"]
 
-[ext_resource type="Texture2D" uid="uid://bltnek1hw4dgq" path="res://Assets/Texture/ShopPlank.png" id="1_685uj"]
 [ext_resource type="Script" uid="uid://dhrr07kh7fdg4" path="res://Script/ShopPerSecond.gd" id="1_kol6x"]
-[ext_resource type="Texture2D" uid="uid://dremukodsswo3" path="res://Assets/Texture/ShopTopDownBorder.png" id="2_54mgh"]
+[ext_resource type="Texture2D" uid="uid://b7vaio1j31gha" path="res://Assets/Texture/ShopPlank2.png" id="2_54mgh"]
+[ext_resource type="Texture2D" uid="uid://dremukodsswo3" path="res://Assets/Texture/ShopTopDownBorder.png" id="3_54mgh"]
 
 [node name="ShopPerSecond" type="Node2D"]
 script = ExtResource("1_kol6x")
@@ -15,17 +15,21 @@ vertical_scroll_mode = 3
 
 [node name="Box" type="VBoxContainer" parent="Scroll"]
 layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 0
 
 [node name="TextureButton" type="TextureButton" parent="Scroll/Box"]
 layout_mode = 2
-texture_normal = ExtResource("1_685uj")
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("2_54mgh")
 
 [node name="LabelPrice" type="Label" parent="Scroll/Box/TextureButton"]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 5.0
-offset_right = 67.0
-offset_bottom = 39.0
+offset_left = 6.0
+offset_top = 7.0
+offset_right = 68.0
+offset_bottom = 41.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 7
 theme_override_font_sizes/font_size = 24
@@ -33,10 +37,10 @@ text = "Цена"
 
 [node name="Label" type="Label" parent="Scroll/Box/TextureButton"]
 layout_mode = 1
-offset_left = 249.0
-offset_top = 81.0
-offset_right = 331.0
-offset_bottom = 115.0
+offset_left = 238.0
+offset_top = 38.0
+offset_right = 320.0
+offset_bottom = 72.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 7
 theme_override_font_sizes/font_size = 24
@@ -45,9 +49,9 @@ text = "+1 /сек"
 [node name="LabelLVL" type="Label" parent="Scroll/Box/TextureButton"]
 layout_mode = 0
 offset_left = 5.0
-offset_top = 81.0
+offset_top = 38.0
 offset_right = 46.0
-offset_bottom = 115.0
+offset_bottom = 72.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 7
 theme_override_font_sizes/font_size = 24
@@ -55,14 +59,15 @@ text = "LVL"
 
 [node name="TextureButton2" type="TextureButton" parent="Scroll/Box"]
 layout_mode = 2
-texture_normal = ExtResource("1_685uj")
+size_flags_horizontal = 4
+texture_normal = ExtResource("2_54mgh")
 
 [node name="LabelPrice" type="Label" parent="Scroll/Box/TextureButton2"]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 5.0
-offset_right = 67.0
-offset_bottom = 39.0
+offset_left = 6.0
+offset_top = 7.0
+offset_right = 68.0
+offset_bottom = 41.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 7
 theme_override_font_sizes/font_size = 24
@@ -70,10 +75,10 @@ text = "Цена"
 
 [node name="Label" type="Label" parent="Scroll/Box/TextureButton2"]
 layout_mode = 1
-offset_left = 249.0
-offset_top = 81.0
-offset_right = 331.0
-offset_bottom = 115.0
+offset_left = 238.0
+offset_top = 38.0
+offset_right = 320.0
+offset_bottom = 72.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 7
 theme_override_font_sizes/font_size = 24
@@ -82,312 +87,16 @@ text = "+5 /сек"
 [node name="LabelLVL" type="Label" parent="Scroll/Box/TextureButton2"]
 layout_mode = 0
 offset_left = 5.0
-offset_top = 81.0
+offset_top = 38.0
 offset_right = 46.0
-offset_bottom = 115.0
+offset_bottom = 72.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 7
 theme_override_font_sizes/font_size = 24
 text = "LVL"
 
-[node name="TextureButton3" type="TextureButton" parent="Scroll/Box"]
-layout_mode = 2
-texture_normal = ExtResource("1_685uj")
-
-[node name="LabelPrice" type="Label" parent="Scroll/Box/TextureButton3"]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 5.0
-offset_right = 67.0
-offset_bottom = 39.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 7
-theme_override_font_sizes/font_size = 24
-text = "Цена"
-
-[node name="Label" type="Label" parent="Scroll/Box/TextureButton3"]
-layout_mode = 1
-offset_left = 249.0
-offset_top = 81.0
-offset_right = 331.0
-offset_bottom = 115.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 7
-theme_override_font_sizes/font_size = 24
-text = "+5 /сек"
-
-[node name="LabelLVL" type="Label" parent="Scroll/Box/TextureButton3"]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 81.0
-offset_right = 46.0
-offset_bottom = 115.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 7
-theme_override_font_sizes/font_size = 24
-text = "LVL"
-
-[node name="TextureButton4" type="TextureButton" parent="Scroll/Box"]
-layout_mode = 2
-texture_normal = ExtResource("1_685uj")
-
-[node name="LabelPrice" type="Label" parent="Scroll/Box/TextureButton4"]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 5.0
-offset_right = 67.0
-offset_bottom = 39.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 7
-theme_override_font_sizes/font_size = 24
-text = "Цена"
-
-[node name="Label" type="Label" parent="Scroll/Box/TextureButton4"]
-layout_mode = 1
-offset_left = 249.0
-offset_top = 81.0
-offset_right = 331.0
-offset_bottom = 115.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 7
-theme_override_font_sizes/font_size = 24
-text = "+5 /сек"
-
-[node name="LabelLVL" type="Label" parent="Scroll/Box/TextureButton4"]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 81.0
-offset_right = 46.0
-offset_bottom = 115.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 7
-theme_override_font_sizes/font_size = 24
-text = "LVL"
-
-[node name="TextureButton5" type="TextureButton" parent="Scroll/Box"]
-layout_mode = 2
-texture_normal = ExtResource("1_685uj")
-
-[node name="LabelPrice" type="Label" parent="Scroll/Box/TextureButton5"]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 5.0
-offset_right = 67.0
-offset_bottom = 39.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 7
-theme_override_font_sizes/font_size = 24
-text = "Цена"
-
-[node name="Label" type="Label" parent="Scroll/Box/TextureButton5"]
-layout_mode = 1
-offset_left = 249.0
-offset_top = 81.0
-offset_right = 331.0
-offset_bottom = 115.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 7
-theme_override_font_sizes/font_size = 24
-text = "+5 /сек"
-
-[node name="LabelLVL" type="Label" parent="Scroll/Box/TextureButton5"]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 81.0
-offset_right = 46.0
-offset_bottom = 115.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 7
-theme_override_font_sizes/font_size = 24
-text = "LVL"
-
-[node name="TextureButton6" type="TextureButton" parent="Scroll/Box"]
-layout_mode = 2
-texture_normal = ExtResource("1_685uj")
-
-[node name="LabelPrice" type="Label" parent="Scroll/Box/TextureButton6"]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 5.0
-offset_right = 67.0
-offset_bottom = 39.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 7
-theme_override_font_sizes/font_size = 24
-text = "Цена"
-
-[node name="Label" type="Label" parent="Scroll/Box/TextureButton6"]
-layout_mode = 1
-offset_left = 249.0
-offset_top = 81.0
-offset_right = 331.0
-offset_bottom = 115.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 7
-theme_override_font_sizes/font_size = 24
-text = "+5 /сек"
-
-[node name="LabelLVL" type="Label" parent="Scroll/Box/TextureButton6"]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 81.0
-offset_right = 46.0
-offset_bottom = 115.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 7
-theme_override_font_sizes/font_size = 24
-text = "LVL"
-
-[node name="TextureButton7" type="TextureButton" parent="Scroll/Box"]
-layout_mode = 2
-texture_normal = ExtResource("1_685uj")
-
-[node name="LabelPrice" type="Label" parent="Scroll/Box/TextureButton7"]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 5.0
-offset_right = 67.0
-offset_bottom = 39.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 7
-theme_override_font_sizes/font_size = 24
-text = "Цена"
-
-[node name="Label" type="Label" parent="Scroll/Box/TextureButton7"]
-layout_mode = 1
-offset_left = 249.0
-offset_top = 81.0
-offset_right = 331.0
-offset_bottom = 115.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 7
-theme_override_font_sizes/font_size = 24
-text = "+5 /сек"
-
-[node name="LabelLVL" type="Label" parent="Scroll/Box/TextureButton7"]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 81.0
-offset_right = 46.0
-offset_bottom = 115.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 7
-theme_override_font_sizes/font_size = 24
-text = "LVL"
-
-[node name="TextureButton8" type="TextureButton" parent="Scroll/Box"]
-layout_mode = 2
-texture_normal = ExtResource("1_685uj")
-
-[node name="LabelPrice" type="Label" parent="Scroll/Box/TextureButton8"]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 5.0
-offset_right = 67.0
-offset_bottom = 39.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 7
-theme_override_font_sizes/font_size = 24
-text = "Цена"
-
-[node name="Label" type="Label" parent="Scroll/Box/TextureButton8"]
-layout_mode = 1
-offset_left = 249.0
-offset_top = 81.0
-offset_right = 331.0
-offset_bottom = 115.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 7
-theme_override_font_sizes/font_size = 24
-text = "+5 /сек"
-
-[node name="LabelLVL" type="Label" parent="Scroll/Box/TextureButton8"]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 81.0
-offset_right = 46.0
-offset_bottom = 115.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 7
-theme_override_font_sizes/font_size = 24
-text = "LVL"
-
-[node name="TextureButton9" type="TextureButton" parent="Scroll/Box"]
-layout_mode = 2
-texture_normal = ExtResource("1_685uj")
-
-[node name="LabelPrice" type="Label" parent="Scroll/Box/TextureButton9"]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 5.0
-offset_right = 67.0
-offset_bottom = 39.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 7
-theme_override_font_sizes/font_size = 24
-text = "Цена"
-
-[node name="Label" type="Label" parent="Scroll/Box/TextureButton9"]
-layout_mode = 1
-offset_left = 249.0
-offset_top = 81.0
-offset_right = 331.0
-offset_bottom = 115.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 7
-theme_override_font_sizes/font_size = 24
-text = "+5 /сек"
-
-[node name="LabelLVL" type="Label" parent="Scroll/Box/TextureButton9"]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 81.0
-offset_right = 46.0
-offset_bottom = 115.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 7
-theme_override_font_sizes/font_size = 24
-text = "LVL"
-
-[node name="TextureButton10" type="TextureButton" parent="Scroll/Box"]
-layout_mode = 2
-texture_normal = ExtResource("1_685uj")
-
-[node name="LabelPrice" type="Label" parent="Scroll/Box/TextureButton10"]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 5.0
-offset_right = 67.0
-offset_bottom = 39.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 7
-theme_override_font_sizes/font_size = 24
-text = "Цена"
-
-[node name="Label" type="Label" parent="Scroll/Box/TextureButton10"]
-layout_mode = 1
-offset_left = 249.0
-offset_top = 81.0
-offset_right = 331.0
-offset_bottom = 115.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 7
-theme_override_font_sizes/font_size = 24
-text = "+5 /сек"
-
-[node name="LabelLVL" type="Label" parent="Scroll/Box/TextureButton10"]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 81.0
-offset_right = 46.0
-offset_bottom = 115.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 7
-theme_override_font_sizes/font_size = 24
-text = "LVL"
-
-[node name="ShopTopDownBorder" type="Sprite2D" parent="Scroll"]
-texture = ExtResource("2_54mgh")
+[node name="ShopTopDownBorder" type="Sprite2D" parent="."]
+texture = ExtResource("3_54mgh")
 centered = false
 
 [connection signal="pressed" from="Scroll/Box/TextureButton" to="." method="_on_texture_button_pressed"]

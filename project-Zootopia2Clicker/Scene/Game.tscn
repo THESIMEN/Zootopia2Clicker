@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://d1wigo34absfm"]
+[gd_scene load_steps=19 format=3 uid="uid://d1wigo34absfm"]
 
 [ext_resource type="Script" uid="uid://di4emqfi2egv4" path="res://Script/Game.gd" id="1_mopgc"]
 [ext_resource type="Texture2D" uid="uid://cou2d8hv2dpjy" path="res://Assets/Background/SakuraBG.png" id="2_ivtx6"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://7mjtwpr44l8f" path="res://Assets/Texture/ShopOpenButton2Pressed.png" id="6_ilbig"]
 [ext_resource type="Texture2D" uid="uid://tuiiju4u1k42" path="res://Assets/Texture/ShopOpenButton3Hover.png" id="7_kfjtm"]
 [ext_resource type="Texture2D" uid="uid://ccnk2ixd5dqjp" path="res://Assets/Texture/MoneyPerClickButton2Pressed.png" id="9_aawhf"]
+[ext_resource type="FontFile" uid="uid://crpcfvhbejxii" path="res://Assets/Fonts/Lilita One Russian.ttf" id="9_ilbig"]
 [ext_resource type="PackedScene" uid="uid://y4ytxf16qjye" path="res://Scene/ShopPerSecond.tscn" id="11_g3fkh"]
 [ext_resource type="Texture2D" uid="uid://dbxhyprcm2rix" path="res://Assets/Texture/MoneyPerSecondButton2Pressed.png" id="11_kcbv6"]
 [ext_resource type="Texture2D" uid="uid://4r4ew8ct8vg2" path="res://Assets/Texture/MoneyPerClickButton1Normal.png" id="11_nspe4"]
@@ -115,7 +116,8 @@ anchor_right = 1.0
 offset_bottom = 55.0
 grow_horizontal = 2
 theme_override_constants/outline_size = 10
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("9_ilbig")
+theme_override_font_sizes/font_size = 44
 text = "МАГАЗИН"
 horizontal_alignment = 1
 
@@ -149,7 +151,8 @@ offset_bottom = 14.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/outline_size = 6
-theme_override_font_sizes/font_size = 18
+theme_override_fonts/font = ExtResource("9_ilbig")
+theme_override_font_sizes/font_size = 21
 text = "Монеты за клик"
 
 [node name="MoneyPerSecondButton" type="TextureButton" parent="Control/MenuShop/Box"]
@@ -172,7 +175,8 @@ offset_bottom = 14.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/outline_size = 6
-theme_override_font_sizes/font_size = 18
+theme_override_fonts/font = ExtResource("9_ilbig")
+theme_override_font_sizes/font_size = 21
 text = "Монеты в сек"
 
 [node name="CloseShopButton" type="TextureButton" parent="Control/MenuShop"]

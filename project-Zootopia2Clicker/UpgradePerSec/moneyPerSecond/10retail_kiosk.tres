@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="UpgradeData" format=3 uid="uid://dmcr3ttfkilwg"]
+
+[ext_resource type="Script" uid="uid://dm27dal87tjxq" path="res://UpgradePerSec/UpgradeData.gd" id="1_iso0m"]
+
+[resource]
+script = ExtResource("1_iso0m")
+id = "mps10"
+title_key = "retail_kiosk"
+prices = Array[int]([700000, 750000, 800000, 850000, 900000])
+bonuses = Array[int]([250, 250, 250, 250, 250])
+metadata/_custom_type_script = "uid://dm27dal87tjxq"

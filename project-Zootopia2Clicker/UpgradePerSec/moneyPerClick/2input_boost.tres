@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="UpgradeData" format=3 uid="uid://mtvt10bemf5f"]
+
+[ext_resource type="Script" uid="uid://dm27dal87tjxq" path="res://UpgradePerSec/UpgradeData.gd" id="1_hvh0y"]
+
+[resource]
+script = ExtResource("1_hvh0y")
+id = "mpc2"
+title_key = "input_boost"
+prices = Array[int]([100, 250, 400, 550, 700])
+bonuses = Array[int]([3, 5, 8, 10, 12])
+is_per_second = false
+metadata/_custom_type_script = "uid://dm27dal87tjxq"

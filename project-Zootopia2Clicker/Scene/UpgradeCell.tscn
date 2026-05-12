@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://hfwi8vyokufb"]
+
+[ext_resource type="Script" uid="uid://cem1rcm2xjdie" path="res://Script/UpgradeCell.gd" id="1_wth74"]
+[ext_resource type="Texture2D" uid="uid://c0pl7nwwt5i73" path="res://Assets/Texture/ShopPlank1.png" id="2_hauuu"]
+[ext_resource type="FontFile" uid="uid://crpcfvhbejxii" path="res://Assets/Fonts/Lilita One Russian.ttf" id="3_i06xt"]
+[ext_resource type="Texture2D" uid="uid://blis43fot743g" path="res://Assets/Texture/0Star.png" id="5_0a1qr"]
+[ext_resource type="Texture2D" uid="uid://dbegyrxewc05v" path="res://Assets/Texture/1Star.png" id="6_cpyst"]
+[ext_resource type="Texture2D" uid="uid://d3fc8i3xw8awd" path="res://Assets/Texture/2Star.png" id="7_adgeu"]
+[ext_resource type="Texture2D" uid="uid://viyahjkdrsha" path="res://Assets/Texture/3Star.png" id="8_175cq"]
+[ext_resource type="Texture2D" uid="uid://cyo2ehlwf3lhx" path="res://Assets/Texture/4Star.png" id="9_olqy8"]
+[ext_resource type="Texture2D" uid="uid://75r7xnr1oaer" path="res://Assets/Texture/5Star.png" id="10_8tx1l"]
+
+[node name="UpgradeCell" type="Control" unique_id=373654949]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+script = ExtResource("1_wth74")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=792871201]
+layout_mode = 0
+offset_right = 340.0
+offset_bottom = 80.0
+texture_normal = ExtResource("2_hauuu")
+
+[node name="LabelTitle" type="Label" parent="TextureButton" unique_id=1764793200]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 4.0
+offset_right = 198.0
+offset_bottom = 38.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("3_i06xt")
+theme_override_font_sizes/font_size = 18
+text = "name"
+
+[node name="LabelPrice" type="Label" parent="TextureButton" unique_id=1880895780]
+layout_mode = 0
+offset_left = 162.0
+offset_top = 40.0
+offset_right = 331.0
+offset_bottom = 74.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("3_i06xt")
+theme_override_font_sizes/font_size = 18
+text = "price"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="LabelBonus" type="Label" parent="TextureButton" unique_id=1629895198]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 46.0
+offset_right = 128.0
+offset_bottom = 75.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("3_i06xt")
+theme_override_font_sizes/font_size = 18
+text = "mps"
+vertical_alignment = 2
+
+[node name="Stars" type="Node2D" parent="TextureButton" unique_id=996355194]
+
+[node name="Star0" type="Sprite2D" parent="TextureButton/Stars" unique_id=792958588]
+position = Vector2(268, 19)
+texture = ExtResource("5_0a1qr")
+
+[node name="Star1" type="Sprite2D" parent="TextureButton/Stars" unique_id=702823132]
+visible = false
+position = Vector2(268, 19)
+texture = ExtResource("6_cpyst")
+
+[node name="Star2" type="Sprite2D" parent="TextureButton/Stars" unique_id=400346821]
+visible = false
+position = Vector2(268, 19)
+texture = ExtResource("7_adgeu")
+
+[node name="Star3" type="Sprite2D" parent="TextureButton/Stars" unique_id=243141522]
+visible = false
+position = Vector2(268, 19)
+texture = ExtResource("8_175cq")
+
+[node name="Star4" type="Sprite2D" parent="TextureButton/Stars" unique_id=506434089]
+visible = false
+position = Vector2(268, 19)
+texture = ExtResource("9_olqy8")
+
+[node name="Star5" type="Sprite2D" parent="TextureButton/Stars" unique_id=1718218932]
+visible = false
+position = Vector2(268, 19)
+texture = ExtResource("10_8tx1l")

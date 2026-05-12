@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="UpgradeData" format=3 uid="uid://bdncfv5klhq4i"]
+
+[ext_resource type="Script" uid="uid://dm27dal87tjxq" path="res://UpgradePerSec/UpgradeData.gd" id="1_apg16"]
+
+[resource]
+script = ExtResource("1_apg16")
+id = "mps1"
+title_key = "street_stand"
+prices = Array[int]([10, 30, 75, 200, 500])
+bonuses = Array[int]([1, 1, 1, 1, 1])
+metadata/_custom_type_script = "uid://dm27dal87tjxq"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="UpgradeData" format=3 uid="uid://d1gexayhbedks"]
+
+[ext_resource type="Script" uid="uid://dm27dal87tjxq" path="res://UpgradePerSec/UpgradeData.gd" id="1_5ppiq"]
+
+[resource]
+script = ExtResource("1_5ppiq")
+id = "mpc9"
+title_key = "precision_driver"
+prices = Array[int]([2000000, 3000000, 4000000, 5000000, 6000000])
+bonuses = Array[int]([500, 750, 1000, 1250, 1500])
+is_per_second = false
+metadata/_custom_type_script = "uid://dm27dal87tjxq"

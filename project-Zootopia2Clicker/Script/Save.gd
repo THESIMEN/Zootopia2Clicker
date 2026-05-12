@@ -2,7 +2,7 @@ extends Node
 
 var savePath = "res://GameSaves/Save-file.cfg"
 var config = ConfigFile.new()
-var loadRespone = config.load(savePath)
+#var loadRespone = config.load(savePath)
 
 func SaveValue(section, key, value):
 	config.set_value(section, key, value)
@@ -11,3 +11,5 @@ func SaveValue(section, key, value):
 func LoadValue(section, key, default):
 	return config.get_value(section, key, default)
 	
+func _ready():
+	config.load(savePath)

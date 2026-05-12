@@ -1,10 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://bjiwa6w5p453r"]
+[gd_scene format=3 uid="uid://bjadfoflwtd6e"]
 
-[ext_resource type="Script" uid="uid://dpxlm4twqw82p" path="res://Script/Click_msg.gd" id="1_a6hln"]
+[ext_resource type="Script" uid="uid://dwc85aulletmv" path="res://Script/Click_msg.gd" id="1_a6hln"]
+[ext_resource type="FontFile" uid="uid://crpcfvhbejxii" path="res://Assets/Fonts/Lilita One Russian.ttf" id="2_jghx1"]
 
-[node name="ClickMsg" type="Node2D"]
+[node name="ClickMsg" type="Node2D" unique_id=1410574568]
 script = ExtResource("1_a6hln")
 
-[node name="LabelAmount" type="Label" parent="."]
+[node name="LabelAmount" type="Label" parent="." unique_id=564303739]
 offset_right = 40.0
 offset_bottom = 23.0
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_jghx1")
+theme_override_font_sizes/font_size = 32

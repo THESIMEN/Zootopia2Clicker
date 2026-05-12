@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="UpgradeData" format=3 uid="uid://dx5osfofijmwc"]
+
+[ext_resource type="Script" uid="uid://dm27dal87tjxq" path="res://UpgradePerSec/UpgradeData.gd" id="1_rpis4"]
+
+[resource]
+script = ExtResource("1_rpis4")
+id = "mpc8"
+title_key = "burst_module"
+prices = Array[int]([800000, 1000000, 1250000, 1500000, 1750000])
+bonuses = Array[int]([150, 200, 250, 300, 350])
+is_per_second = false
+metadata/_custom_type_script = "uid://dm27dal87tjxq"

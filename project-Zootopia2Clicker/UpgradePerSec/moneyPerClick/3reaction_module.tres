@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="UpgradeData" format=3 uid="uid://c0il0tsnkv0vb"]
+
+[ext_resource type="Script" uid="uid://dm27dal87tjxq" path="res://UpgradePerSec/UpgradeData.gd" id="1_cxcd0"]
+
+[resource]
+script = ExtResource("1_cxcd0")
+id = "mpc3"
+title_key = "reaction_module"
+prices = Array[int]([1500, 2000, 2500, 3000, 3500])
+bonuses = Array[int]([10, 10, 10, 10, 10])
+is_per_second = false
+metadata/_custom_type_script = "uid://dm27dal87tjxq"

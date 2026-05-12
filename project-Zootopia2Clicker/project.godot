@@ -8,26 +8,40 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="Zootopia2Clicker"
-run/main_scene="res://Scene/Game.tscn"
-config/features=PackedStringArray("4.5", "GL Compatibility")
+run/main_scene="uid://d1wigo34absfm"
+config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Save="*res://Script/Save.gd"
 Global="*res://Script/Global.gd"
+Ads="*uid://c536k1xohaabw"
+YandexSDK="*uid://c0526awhkcl5p"
 
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot-yandex-games-sdk/plugin.cfg")
+
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://translation/translations.en.translation", "res://translation/translations.ru.translation")
 
 [rendering]
 

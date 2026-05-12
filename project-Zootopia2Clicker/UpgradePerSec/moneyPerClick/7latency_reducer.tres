@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="UpgradeData" format=3 uid="uid://bvq12a5q1f42q"]
+
+[ext_resource type="Script" uid="uid://dm27dal87tjxq" path="res://UpgradePerSec/UpgradeData.gd" id="1_qibqo"]
+
+[resource]
+script = ExtResource("1_qibqo")
+id = "mpc7"
+title_key = "latency_reducer"
+prices = Array[int]([300000, 400000, 500000, 600000, 700000])
+bonuses = Array[int]([50, 65, 75, 90, 100])
+is_per_second = false
+metadata/_custom_type_script = "uid://dm27dal87tjxq"

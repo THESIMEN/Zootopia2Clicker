@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="UpgradeData" format=3 uid="uid://u22fe1l3iaio"]
+
+[ext_resource type="Script" uid="uid://dm27dal87tjxq" path="res://UpgradePerSec/UpgradeData.gd" id="1_vfnem"]
+
+[resource]
+script = ExtResource("1_vfnem")
+id = "mps8"
+title_key = "trading_post"
+prices = Array[int]([230000, 260000, 290000, 320000, 350000])
+bonuses = Array[int]([75, 75, 75, 75, 75])
+metadata/_custom_type_script = "uid://dm27dal87tjxq"

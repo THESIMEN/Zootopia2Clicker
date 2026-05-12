@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://d1wigo34absfm"]
+[gd_scene format=3 uid="uid://d1wigo34absfm"]
 
 [ext_resource type="Script" uid="uid://di4emqfi2egv4" path="res://Script/Game.gd" id="1_mopgc"]
 [ext_resource type="Texture2D" uid="uid://cou2d8hv2dpjy" path="res://Assets/Background/SakuraBG.png" id="2_ivtx6"]
@@ -18,24 +18,46 @@
 [ext_resource type="Texture2D" uid="uid://bar1hj16gwt5o" path="res://Assets/Texture/CloseButton2Pressed.png" id="14_ilbig"]
 [ext_resource type="PackedScene" uid="uid://dhsusta606ic" path="res://Scene/ShopPerClick.tscn" id="15_bxrg2"]
 [ext_resource type="Texture2D" uid="uid://d08bsqsggifbb" path="res://Assets/Texture/CloseButton3Hover.png" id="15_kfjtm"]
+[ext_resource type="Script" uid="uid://dm27dal87tjxq" path="res://UpgradePerSec/UpgradeData.gd" id="19_1mx4w"]
+[ext_resource type="Resource" uid="uid://cdh5niiubhecp" path="res://UpgradePerSec/moneyPerClick/1click_core.tres" id="19_65ldo"]
+[ext_resource type="Resource" uid="uid://bdncfv5klhq4i" path="res://UpgradePerSec/moneyPerSecond/1street_stand.tres" id="20_65ldo"]
+[ext_resource type="Resource" uid="uid://mtvt10bemf5f" path="res://UpgradePerSec/moneyPerClick/2input_boost.tres" id="20_dxek2"]
+[ext_resource type="Resource" uid="uid://cmoap5rlv5ne8" path="res://UpgradePerSec/moneyPerSecond/2small_shop.tres" id="21_0yiub"]
+[ext_resource type="Resource" uid="uid://c0il0tsnkv0vb" path="res://UpgradePerSec/moneyPerClick/3reaction_module.tres" id="21_30sih"]
+[ext_resource type="Resource" uid="uid://cj75lexi5ertk" path="res://UpgradePerSec/moneyPerSecond/3market_stall.tres" id="22_10r1t"]
+[ext_resource type="Resource" uid="uid://dpmxradm3wwbr" path="res://UpgradePerSec/moneyPerClick/4trigger_upgrade.tres" id="22_xto0v"]
+[ext_resource type="Resource" uid="uid://c1byvuk36u3cs" path="res://UpgradePerSec/moneyPerClick/5signal_amplifier.tres" id="23_eg5pg"]
+[ext_resource type="Resource" uid="uid://copyx4a0hei6s" path="res://UpgradePerSec/moneyPerSecond/4trading_booth.tres" id="23_vmjmr"]
+[ext_resource type="Resource" uid="uid://0tqeh0ej2pv8" path="res://UpgradePerSec/moneyPerClick/6click_processor.tres" id="24_47blv"]
+[ext_resource type="Resource" uid="uid://ukx38h84m0ha" path="res://UpgradePerSec/moneyPerSecond/5local_vendor.tres" id="24_yl8rb"]
+[ext_resource type="Resource" uid="uid://bvq12a5q1f42q" path="res://UpgradePerSec/moneyPerClick/7latency_reducer.tres" id="25_a7j53"]
+[ext_resource type="Resource" uid="uid://c4afk8ftsukui" path="res://UpgradePerSec/moneyPerSecond/6mini_market.tres" id="25_fm120"]
+[ext_resource type="Resource" uid="uid://dx5osfofijmwc" path="res://UpgradePerSec/moneyPerClick/8burst_module.tres" id="26_1dunb"]
+[ext_resource type="Resource" uid="uid://ndxw4qx0gjc" path="res://UpgradePerSec/moneyPerSecond/7supply_stand.tres" id="26_sq4tt"]
+[ext_resource type="Resource" uid="uid://u22fe1l3iaio" path="res://UpgradePerSec/moneyPerSecond/8trading_post.tres" id="27_ct3sx"]
+[ext_resource type="Resource" uid="uid://d1gexayhbedks" path="res://UpgradePerSec/moneyPerClick/9precision_driver.tres" id="27_jjbbk"]
+[ext_resource type="Resource" uid="uid://b553yk206xt8h" path="res://UpgradePerSec/moneyPerClick/10quantum_click.tres" id="28_qugof"]
+[ext_resource type="Resource" uid="uid://cce8hd8tkuigc" path="res://UpgradePerSec/moneyPerSecond/9market_corner.tres" id="28_tridy"]
+[ext_resource type="Resource" uid="uid://dmcr3ttfkilwg" path="res://UpgradePerSec/moneyPerSecond/10retail_kiosk.tres" id="29_dxek2"]
+[ext_resource type="Texture2D" uid="uid://kqjyh70uwapi" path="res://Assets/ADS/Coin.png" id="40_30sih"]
 
-[node name="Game" type="Node2D"]
+[node name="Game" type="Node2D" unique_id=805168813]
 script = ExtResource("1_mopgc")
 
-[node name="UI" type="CanvasLayer" parent="."]
+[node name="UI" type="CanvasLayer" parent="." unique_id=2005909435]
 layer = -5
 
-[node name="BG" type="Sprite2D" parent="UI"]
+[node name="BG" type="Sprite2D" parent="UI" unique_id=396314534]
 texture = ExtResource("2_ivtx6")
 centered = false
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." unique_id=1392138981]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1280.0
 offset_bottom = 720.0
 
-[node name="ClickerButton" type="TextureButton" parent="Control"]
+[node name="ClickerButton" type="TextureButton" parent="Control" unique_id=1092611566]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -53,7 +75,7 @@ texture_pressed = ExtResource("4_48ymf")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="LabelMoney" type="Label" parent="Control"]
+[node name="LabelMoney" type="Label" parent="Control" unique_id=1080791158]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -62,11 +84,12 @@ grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("9_ilbig")
 theme_override_font_sizes/font_size = 70
-text = "(money)"
+text = "money"
 horizontal_alignment = 1
 
-[node name="LabelMoneyPerSecond" type="Label" parent="Control"]
+[node name="LabelMoneyPerSecond" type="Label" parent="Control" unique_id=278318520]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -76,11 +99,12 @@ grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("9_ilbig")
 theme_override_font_sizes/font_size = 25
-text = "(clicksPerSecond)"
+text = "mps"
 horizontal_alignment = 1
 
-[node name="ShopButton" type="TextureButton" parent="Control"]
+[node name="ShopButton" type="TextureButton" parent="Control" unique_id=1412780035]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -94,7 +118,8 @@ texture_normal = ExtResource("5_bxrg2")
 texture_pressed = ExtResource("6_ilbig")
 texture_hover = ExtResource("7_kfjtm")
 
-[node name="MenuShop" type="MenuBar" parent="Control"]
+[node name="MenuShop" type="MenuBar" parent="Control" unique_id=387568935]
+visible = false
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -105,11 +130,11 @@ offset_right = -10.0
 offset_bottom = 710.0
 grow_horizontal = 0
 
-[node name="ShopBG" type="Sprite2D" parent="Control/MenuShop"]
+[node name="ShopBG" type="Sprite2D" parent="Control/MenuShop" unique_id=1828709325]
 texture = ExtResource("5_3xgnh")
 centered = false
 
-[node name="LabelShop" type="Label" parent="Control/MenuShop"]
+[node name="LabelShop" type="Label" parent="Control/MenuShop" unique_id=7636782]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -118,10 +143,10 @@ grow_horizontal = 2
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("9_ilbig")
 theme_override_font_sizes/font_size = 44
-text = "МАГАЗИН"
+text = "shop"
 horizontal_alignment = 1
 
-[node name="Box" type="HBoxContainer" parent="Control/MenuShop"]
+[node name="Box" type="HBoxContainer" parent="Control/MenuShop" unique_id=195122736]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -130,56 +155,60 @@ offset_bottom = 120.0
 grow_horizontal = 2
 alignment = 1
 
-[node name="MoneyPerClickButton" type="TextureButton" parent="Control/MenuShop/Box"]
+[node name="MoneyPerClickButton" type="TextureButton" parent="Control/MenuShop/Box" unique_id=2034315892]
 layout_mode = 2
 size_flags_horizontal = 4
 texture_normal = ExtResource("11_nspe4")
 texture_pressed = ExtResource("9_aawhf")
 stretch_mode = 3
 
-[node name="Label" type="Label" parent="Control/MenuShop/Box/MoneyPerClickButton"]
+[node name="Label" type="Label" parent="Control/MenuShop/Box/MoneyPerClickButton" unique_id=415245592]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -73.5
-offset_top = -14.0
-offset_right = 73.5
-offset_bottom = 14.0
+offset_left = -50.0
+offset_top = -12.5
+offset_right = 50.0
+offset_bottom = 12.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("9_ilbig")
 theme_override_font_sizes/font_size = 21
-text = "Монеты за клик"
+text = "coins_click"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="MoneyPerSecondButton" type="TextureButton" parent="Control/MenuShop/Box"]
+[node name="MoneyPerSecondButton" type="TextureButton" parent="Control/MenuShop/Box" unique_id=176004019]
 layout_mode = 2
 texture_normal = ExtResource("12_aawhf")
 texture_pressed = ExtResource("11_kcbv6")
 stretch_mode = 3
 
-[node name="Label" type="Label" parent="Control/MenuShop/Box/MoneyPerSecondButton"]
+[node name="Label" type="Label" parent="Control/MenuShop/Box/MoneyPerSecondButton" unique_id=1322994062]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -62.0
-offset_top = -14.0
-offset_right = 62.0
-offset_bottom = 14.0
+offset_left = -44.0
+offset_top = -12.5
+offset_right = 44.0
+offset_bottom = 12.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("9_ilbig")
 theme_override_font_sizes/font_size = 21
-text = "Монеты в сек"
+text = "coins_sec"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="CloseShopButton" type="TextureButton" parent="Control/MenuShop"]
+[node name="CloseShopButton" type="TextureButton" parent="Control/MenuShop" unique_id=1355947816]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -195,14 +224,46 @@ texture_pressed = ExtResource("14_ilbig")
 texture_hover = ExtResource("15_kfjtm")
 stretch_mode = 3
 
-[node name="ShopPerClick" parent="Control/MenuShop" instance=ExtResource("15_bxrg2")]
+[node name="ShopPerClick" parent="Control/MenuShop" unique_id=1052380625 instance=ExtResource("15_bxrg2")]
+position = Vector2(5, 125)
+upgrades = Array[ExtResource("19_1mx4w")]([ExtResource("19_65ldo"), ExtResource("20_dxek2"), ExtResource("21_30sih"), ExtResource("22_xto0v"), ExtResource("23_eg5pg"), ExtResource("24_47blv"), ExtResource("25_a7j53"), ExtResource("26_1dunb"), ExtResource("27_jjbbk"), ExtResource("28_qugof")])
+
+[node name="ShopPerSecond" parent="Control/MenuShop" unique_id=2138634963 instance=ExtResource("11_g3fkh")]
 visible = false
 position = Vector2(5, 125)
+upgrades = Array[ExtResource("19_1mx4w")]([ExtResource("20_65ldo"), ExtResource("21_0yiub"), ExtResource("22_10r1t"), ExtResource("23_vmjmr"), ExtResource("24_yl8rb"), ExtResource("25_fm120"), ExtResource("26_sq4tt"), ExtResource("27_ct3sx"), ExtResource("28_tridy"), ExtResource("29_dxek2")])
 
-[node name="ShopPerSecond" parent="Control/MenuShop" instance=ExtResource("11_g3fkh")]
-position = Vector2(5, 125)
+[node name="AdButton" type="TextureButton" parent="Control" unique_id=141267004]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 260.0
+offset_right = 155.0
+offset_bottom = 398.0
+texture_normal = ExtResource("40_30sih")
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="Timer" type="Timer" parent="."]
+[node name="LabelAd" type="Label" parent="Control/AdButton" unique_id=1759965501]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -74.0625
+offset_top = -25.0
+offset_right = 74.0625
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("9_ilbig")
+text = "ad_double_click"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Timer" type="Timer" parent="." unique_id=372078229]
 autostart = true
 
 [connection signal="pressed" from="Control/ClickerButton" to="." method="_on_clicker_button_pressed"]
@@ -210,4 +271,5 @@ autostart = true
 [connection signal="pressed" from="Control/MenuShop/Box/MoneyPerClickButton" to="." method="_on_money_per_click_button_pressed"]
 [connection signal="pressed" from="Control/MenuShop/Box/MoneyPerSecondButton" to="." method="_on_money_per_second_button_pressed"]
 [connection signal="pressed" from="Control/MenuShop/CloseShopButton" to="." method="_on_close_shop_button_pressed"]
+[connection signal="pressed" from="Control/AdButton" to="." method="_on_ad_button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -2,6 +2,8 @@ extends Node
 
 signal boost_started
 signal boost_ended
+signal ad_start
+signal ad_end
 
 var double_click_active := false
 
@@ -23,12 +25,21 @@ func show_double_click_ad():
 
 
 func _on_rewarded_ad(result):
-	if result == "rewarded" and not reward_granted:
-		reward_granted = true
-		activate_boost()
+	match result:
+		"opened":
+			ad_start.emit()
 
+		"rewarded":
+			if not reward_granted:
+				reward_granted = true
+				activate_boost()
+
+		"closed", "error":
+			ad_end.emit()
+			reward_granted = false
 
 func activate_boost():
+	ad_end.emit()
 	if double_click_active:
 		return
 
@@ -37,6 +48,7 @@ func activate_boost():
 	boost_time_left = boost_time
 
 	boost_started.emit()
+
 
 	while boost_time_left > 0:
 		await get_tree().create_timer(1.0).timeout

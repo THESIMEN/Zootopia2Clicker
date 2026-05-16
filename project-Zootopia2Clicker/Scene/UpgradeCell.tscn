@@ -19,12 +19,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
+mouse_filter = 1
 script = ExtResource("1_wth74")
 
 [node name="TextureButton" type="TextureButton" parent="." unique_id=792871201]
 layout_mode = 0
 offset_right = 340.0
 offset_bottom = 80.0
+mouse_filter = 1
 texture_normal = ExtResource("2_hauuu")
 
 [node name="LabelTitle" type="Label" parent="TextureButton" unique_id=1764793200]

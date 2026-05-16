@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://feg3647siraj"
-path="res://.godot/imported/Rumi2.png-bf59e9a67936e71996e180d28b935616.ctex"
+uid="uid://coc5sbjjji2s3"
+path="res://.godot/imported/VolumeNo.png-7dcebeae6ac4e3ddfde79922da1f4a2c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ButtonClick/Rumi2.png"
-dest_files=["res://.godot/imported/Rumi2.png-bf59e9a67936e71996e180d28b935616.ctex"]
+source_file="res://Assets/Texture/VolumeNo.png"
+dest_files=["res://.godot/imported/VolumeNo.png-7dcebeae6ac4e3ddfde79922da1f4a2c.ctex"]
 
 [params]
 

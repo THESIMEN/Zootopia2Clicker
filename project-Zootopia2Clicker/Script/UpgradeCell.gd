@@ -71,7 +71,8 @@ func _buy():
 func update_ui():
 
 	var lvl = Global.get_level(data.id)
-
+	var key = "plus_sec" if data.is_per_second else "plus_click"
+	
 	for s in stars:
 		s.hide()
 
@@ -86,9 +87,8 @@ func update_ui():
 
 		var last_bonus = data.bonuses[data.max_level - 1]
 
-		bonus.text = tr("plus_sec").format({
-			"value": last_bonus
-		})
+		
+		bonus.text = tr(key).format({"value": last_bonus})
 
 		return
 
@@ -99,5 +99,5 @@ func update_ui():
 	button.disabled = false
 
 	price.text = tr("price").format({"price": data.prices[lvl]})
-
-	bonus.text = tr("plus_sec").format({"value": data.bonuses[lvl]})
+	
+	bonus.text = tr(key).format({"value": data.bonuses[lvl]})

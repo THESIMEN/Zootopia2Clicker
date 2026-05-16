@@ -1,33 +1,34 @@
 keys,en,ru
-money,Money: {amount},Деньги: {amount}
-mps,{value}/s,{value}/с
-shop,Shop,Магазин
-coins_click,Coins per click,Монеты за клик
-coins_sec,Coins per second,Монеты в сек
-ad_double_click,x2 Clicks (30s) Watch Ads,x2 Клики (30сек) Смотреть рекламу
-ad_double_click_active,x2 Clicks ({time}s),x2 Клики ({time}с)
+money,Coins: {amount},Монетки: {amount}
+mps,{value}/sec,{value}/сек
+shop,Toy Shop,Лавка игрушек
+coins_click,Coins per Tap,Монеты за тап
+coins_sec,Coins Factory,Фабрика монет
+ad_double_click,x2 Super Taps (30s) Watch Ads,x2 Супер-тапы (30сек) Смотреть рекламу
+ad_double_click_active,x2 Super Taps ({time}s),x2 Супер-тапы ({time}с)
 
-street_stand,Street Stand,Уличная лавка
-small_shop,Small Shop,Маленький магазин
-market_stall,Market Stall,Рыночный прилавок
-trading_booth,Trading Booth,Торговая будка
-local_vendor,Local Vendor,Местный продавец
-mini_market,Mini Market,Мини-маркет
-supply_stand,Supply Stand,Точка снабжения
-trading_post,Trading Post,Торговый пост
-market_corner,Market Corner,Рыночный уголок
-retail_kiosk,Retail Kiosk,Торговый киоск
+street_stand,Lemonade Box,Лимонадная коробка
+small_shop,Candy Shop,Конфетная лавка
+market_stall,Snack Stand,Лавка вкусняшек
+trading_booth,Toy Booth,Игрушечная будка
+local_vendor,Happy Seller,Веселый продавец
+mini_market,Mini Fun Mart,Мини-маркет веселья
+supply_stand,Snack Supply,Склад вкусняшек
+trading_post,Fun Trading Post,Пост обмена веселья
+market_corner,Cookie Corner,Уголок печенек
+retail_kiosk,Super Toy Kiosk,Супер киоск игрушек
 
-click_core,Click Core,Ядро клика
-input_boost,Input Boost,Ускоритель ввода
-reaction_module,Reaction Module,Модуль реакции
-trigger_upgrade,Trigger Upgrade,Модуль триггера
-signal_amplifier,Signal Amplifier,Усилитель сигнала
-click_processor,Click Processor,Обработчик клика
-latency_reducer,Latency Reducer,Снижение задержки
-burst_module,Burst Module,Импульсный модуль
-precision_driver,Precision Driver,Прецизионный драйвер
-quantum_click,Quantum Click,Квантовый клик
+click_core,Magic Finger,Волшебный пальчик
+input_boost,Turbo Tapper,Турбо-тапер
+reaction_module,Bouncy Button,Прыгучая кнопка
+trigger_upgrade,BOOM Trigger,Бум-триггер
+signal_amplifier,Mega Booster,Мега-усилитель
+click_processor,Tap Machine,Машина тапов
+latency_reducer,Speed Candy,Конфета скорости
+burst_module,Spark Burst,Искровой взрыв
+precision_driver,Laser Finger,Лазерный пальчик
+quantum_click,Galaxy Tap,Галактический тап
 
-price,Price: {price},Цена: {price}
+price,Cost: {price},Цена: {price}
 plus_sec,+{value} sec,+{value} сек
+plus_click,+{value} click,+{value} клик

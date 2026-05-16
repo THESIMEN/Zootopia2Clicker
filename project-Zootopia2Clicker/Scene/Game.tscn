@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://d1wigo34absfm"]
 
 [ext_resource type="Script" uid="uid://di4emqfi2egv4" path="res://Script/Game.gd" id="1_mopgc"]
-[ext_resource type="Texture2D" uid="uid://cou2d8hv2dpjy" path="res://Assets/Background/SakuraBG.png" id="2_ivtx6"]
-[ext_resource type="Texture2D" uid="uid://bmocm8505n7pn" path="res://Assets/ButtonClick/Rumi1.png" id="3_3xgnh"]
-[ext_resource type="Texture2D" uid="uid://feg3647siraj" path="res://Assets/ButtonClick/Rumi2.png" id="4_48ymf"]
+[ext_resource type="Texture2D" uid="uid://b5jqj3s8f16n1" path="res://Assets/Background/Bg.png" id="2_xto0v"]
+[ext_resource type="Texture2D" uid="uid://bb5say1i23odl" path="res://Assets/ButtonClick/BrownSprunki.png" id="3_dxek2"]
 [ext_resource type="Texture2D" uid="uid://dd183xsqhm01k" path="res://Assets/Texture/ShopBG.png" id="5_3xgnh"]
 [ext_resource type="Texture2D" uid="uid://dokk6s7fqmdh4" path="res://Assets/Texture/ShopOpenButton1Normal.png" id="5_bxrg2"]
 [ext_resource type="Texture2D" uid="uid://7mjtwpr44l8f" path="res://Assets/Texture/ShopOpenButton2Pressed.png" id="6_ilbig"]
 [ext_resource type="Texture2D" uid="uid://tuiiju4u1k42" path="res://Assets/Texture/ShopOpenButton3Hover.png" id="7_kfjtm"]
+[ext_resource type="Texture2D" uid="uid://b8aemptc66hdm" path="res://Assets/Texture/rope.png" id="8_eg5pg"]
 [ext_resource type="Texture2D" uid="uid://ccnk2ixd5dqjp" path="res://Assets/Texture/MoneyPerClickButton2Pressed.png" id="9_aawhf"]
 [ext_resource type="FontFile" uid="uid://crpcfvhbejxii" path="res://Assets/Fonts/Lilita One Russian.ttf" id="9_ilbig"]
 [ext_resource type="PackedScene" uid="uid://y4ytxf16qjye" path="res://Scene/ShopPerSecond.tscn" id="11_g3fkh"]
@@ -40,6 +40,11 @@
 [ext_resource type="Resource" uid="uid://cce8hd8tkuigc" path="res://UpgradePerSec/moneyPerSecond/9market_corner.tres" id="28_tridy"]
 [ext_resource type="Resource" uid="uid://dmcr3ttfkilwg" path="res://UpgradePerSec/moneyPerSecond/10retail_kiosk.tres" id="29_dxek2"]
 [ext_resource type="Texture2D" uid="uid://kqjyh70uwapi" path="res://Assets/ADS/Coin.png" id="40_30sih"]
+[ext_resource type="Texture2D" uid="uid://lo7qhjvka383" path="res://Assets/ADS/CoinDisabled.png" id="40_eg5pg"]
+[ext_resource type="AudioStream" uid="uid://dskgummch2rvq" path="res://Assets/Sound/Music/normal-mode-mr-sun-sprunki.ogg" id="40_xto0v"]
+[ext_resource type="Texture2D" uid="uid://coc5sbjjji2s3" path="res://Assets/Texture/VolumeNo.png" id="42_1dunb"]
+[ext_resource type="AudioStream" uid="uid://3wul8vidddkx" path="res://Assets/Sound/Click/click.mp3" id="43_47blv"]
+[ext_resource type="Texture2D" uid="uid://dj885ssmfd7mj" path="res://Assets/Texture/VolumeYes.png" id="43_jjbbk"]
 
 [node name="Game" type="Node2D" unique_id=805168813]
 script = ExtResource("1_mopgc")
@@ -48,30 +53,40 @@ script = ExtResource("1_mopgc")
 layer = -5
 
 [node name="BG" type="Sprite2D" parent="UI" unique_id=396314534]
-texture = ExtResource("2_ivtx6")
+texture = ExtResource("2_xto0v")
 centered = false
+
+[node name="Version" type="Label" parent="UI" unique_id=1586659523]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -31.0
+offset_right = 68.0
+offset_bottom = -8.0
+grow_vertical = 0
+text = "V0.1"
 
 [node name="Control" type="Control" parent="." unique_id=1392138981]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 1280.0
-offset_bottom = 720.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 
 [node name="ClickerButton" type="TextureButton" parent="Control" unique_id=1092611566]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -133.0
-offset_top = -106.0
-offset_right = 93.0
-offset_bottom = 321.00043
+anchor_bottom = 1.0
+offset_left = -220.5
+offset_top = -670.0
+offset_right = 220.5
+offset_bottom = -208.0
 grow_horizontal = 2
-grow_vertical = 2
-texture_normal = ExtResource("3_3xgnh")
-texture_pressed = ExtResource("4_48ymf")
+grow_vertical = 0
+texture_normal = ExtResource("3_dxek2")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -98,7 +113,7 @@ offset_bottom = 131.011
 grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
+theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("9_ilbig")
 theme_override_font_sizes/font_size = 25
 text = "mps"
@@ -110,9 +125,9 @@ anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -130.0
-offset_top = 10.0
+offset_top = 74.0
 offset_right = -10.0
-offset_bottom = 130.0
+offset_bottom = 194.0
 grow_horizontal = 0
 texture_normal = ExtResource("5_bxrg2")
 texture_pressed = ExtResource("6_ilbig")
@@ -125,10 +140,22 @@ anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -360.0
-offset_top = 10.0
+offset_top = 74.0
 offset_right = -10.0
-offset_bottom = 710.0
+offset_bottom = 774.0
 grow_horizontal = 0
+
+[node name="SpriteRope1" type="Sprite2D" parent="Control/MenuShop" unique_id=1999903170]
+position = Vector2(50.999996, -50.999996)
+rotation = 1.5707964
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("8_eg5pg")
+
+[node name="SpriteRope2" type="Sprite2D" parent="Control/MenuShop" unique_id=2021070504]
+position = Vector2(301.99997, -50.999996)
+rotation = 1.5707964
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("8_eg5pg")
 
 [node name="ShopBG" type="Sprite2D" parent="Control/MenuShop" unique_id=1828709325]
 texture = ExtResource("5_3xgnh")
@@ -142,9 +169,10 @@ offset_bottom = 55.0
 grow_horizontal = 2
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("9_ilbig")
-theme_override_font_sizes/font_size = 44
+theme_override_font_sizes/font_size = 32
 text = "shop"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Box" type="HBoxContainer" parent="Control/MenuShop" unique_id=195122736]
 layout_mode = 1
@@ -235,11 +263,12 @@ upgrades = Array[ExtResource("19_1mx4w")]([ExtResource("20_65ldo"), ExtResource(
 
 [node name="AdButton" type="TextureButton" parent="Control" unique_id=141267004]
 layout_mode = 0
-offset_left = 17.0
-offset_top = 260.0
-offset_right = 155.0
-offset_bottom = 398.0
+offset_left = 33.0
+offset_top = 300.0
+offset_right = 206.0
+offset_bottom = 473.0
 texture_normal = ExtResource("40_30sih")
+texture_disabled = ExtResource("40_eg5pg")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -250,21 +279,55 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -74.0625
-offset_top = -25.0
-offset_right = 74.0625
-offset_bottom = 24.0
+offset_left = -105.28125
+offset_top = -5.654419
+offset_right = 105.28125
+offset_bottom = 64.000015
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("9_ilbig")
+theme_override_font_sizes/font_size = 24
 text = "ad_double_click"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
+[node name="Volume" type="HSlider" parent="Control" unique_id=813152161]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -130.0
+offset_top = -96.0
+offset_right = -40.0
+offset_bottom = -24.0
+grow_horizontal = 0
+grow_vertical = 0
+step = 10.0
+value = 100.0
+
+[node name="VolumeNo" type="Sprite2D" parent="Control/Volume" unique_id=502459605]
+position = Vector2(-32.999977, 35.999973)
+scale = Vector2(0.11035167, 0.11035167)
+texture = ExtResource("42_1dunb")
+
+[node name="VolumeYes" type="Sprite2D" parent="Control/Volume" unique_id=537603933]
+position = Vector2(-32.999977, 35.999973)
+scale = Vector2(0.11035167, 0.11035167)
+texture = ExtResource("43_jjbbk")
+
 [node name="Timer" type="Timer" parent="." unique_id=372078229]
 autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1293368069]
+stream = ExtResource("40_xto0v")
+autoplay = true
+
+[node name="ClickAudio" type="AudioStreamPlayer" parent="." unique_id=1198803311]
+stream = ExtResource("43_47blv")
 
 [connection signal="pressed" from="Control/ClickerButton" to="." method="_on_clicker_button_pressed"]
 [connection signal="pressed" from="Control/ShopButton" to="." method="_on_shop_button_pressed"]
@@ -272,4 +335,5 @@ autostart = true
 [connection signal="pressed" from="Control/MenuShop/Box/MoneyPerSecondButton" to="." method="_on_money_per_second_button_pressed"]
 [connection signal="pressed" from="Control/MenuShop/CloseShopButton" to="." method="_on_close_shop_button_pressed"]
 [connection signal="pressed" from="Control/AdButton" to="." method="_on_ad_button_pressed"]
+[connection signal="value_changed" from="Control/Volume" to="." method="_on_volume_value_changed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

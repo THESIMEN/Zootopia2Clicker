@@ -3,6 +3,9 @@ extends Node2D
 @onready var label_money = $Control/LabelMoney
 @onready var label_mps = $Control/LabelMoneyPerSecond
 @onready var label_ad = $Control/AdButton/LabelAd
+@onready var ad_button = $Control/AdButton
+
+var ad_watch = false
 
 func _ready():
 	if YandexSDK.is_working():
@@ -11,18 +14,48 @@ func _ready():
 		update_all_upgrades()
 		update_ui()
 		await get_tree().process_frame
-		await get_tree().create_timer(0.5).timeout
 
 		YandexSDK.game_ready()
 
 	get_viewport().focus_entered.connect(_focus_in)
 	get_viewport().focus_exited.connect(_focus_out)
+	
+	Ads.ad_start.connect(_ad_start)
+	Ads.ad_end.connect(_ad_end)
+
+	Ads.boost_started.connect(_on_boost_started)
+	Ads.boost_ended.connect(_on_boost_ended)
+
+func _ad_start():
+	ad_watch = true
+	
+	YandexSDK.gameplay_stopped()
+	get_tree().paused = true
+
+func _ad_end():
+	ad_watch = false
+
+	YandexSDK.gameplay_started()
+	get_tree().paused = false
+	$AudioStreamPlayer.play()
 
 func _focus_in():
-		YandexSDK.gameplay_started()
+	if ad_watch == true:
+		return
+
+	YandexSDK.gameplay_started()
+	get_tree().paused = false
+	$AudioStreamPlayer.play()
 
 func _focus_out():
-		YandexSDK.gameplay_stopped()
+	YandexSDK.gameplay_stopped()
+	get_tree().paused = true
+
+func _on_boost_started():
+	ad_button.disabled = true
+
+func _on_boost_ended():
+	ad_button.disabled = false
 
 func update_all_upgrades():
 	for cell in $Control/MenuShop/ShopPerClick/ScrollContainer/VBoxContainer.get_children():
@@ -50,8 +83,10 @@ func _physics_process(_delta):
 
 func _process(_delta):
 	update_ad_ui()
-		
+	
 func _on_clicker_button_pressed() -> void:
+	$ClickAudio.play()
+	
 	var click_value = Global.moneyPerClick
 
 	if Ads.double_click_active:
@@ -97,3 +132,12 @@ func _on_money_per_second_button_pressed() -> void:
 func _on_ad_button_pressed() -> void:
 	Ads.show_double_click_ad()
 	print("AD BUTTON PRESSED")
+
+
+func _on_volume_value_changed(value: float) -> void:
+	var volume_db = linear_to_db(value / 100.0)
+	$AudioStreamPlayer.volume_db = volume_db
+	if value == 0:
+		$Control/Volume/VolumeYes.visible = false
+	else:
+		$Control/Volume/VolumeYes.visible = true

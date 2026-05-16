@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmocm8505n7pn"
-path="res://.godot/imported/Rumi1.png-d664cb3f924690b57fd4d58f95b0fe98.ctex"
+uid="uid://bquc8886vddqc"
+path="res://.godot/imported/Обложка.png-d02147b5414d4c2ba3467585b3aafa55.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ButtonClick/Rumi1.png"
-dest_files=["res://.godot/imported/Rumi1.png-d664cb3f924690b57fd4d58f95b0fe98.ctex"]
+source_file="res://Assets/Icons/Обложка.png"
+dest_files=["res://.godot/imported/Обложка.png-d02147b5414d4c2ba3467585b3aafa55.ctex"]
 
 [params]
 

@@ -7,6 +7,6 @@ script = ExtResource("1_hvh0y")
 id = "mpc2"
 title_key = "input_boost"
 prices = Array[int]([100, 250, 400, 550, 700])
-bonuses = Array[int]([3, 5, 8, 10, 12])
+bonuses = Array[int]([5, 5, 10, 10, 15])
 is_per_second = false
 metadata/_custom_type_script = "uid://dm27dal87tjxq"

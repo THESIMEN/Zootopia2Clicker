@@ -6,6 +6,6 @@
 script = ExtResource("1_3novo")
 id = "mps6"
 title_key = "mini_market"
-prices = Array[int]([50000, 62500, 75000, 86500, 100000])
-bonuses = Array[int]([40, 40, 40, 40, 40])
+prices = Array[int]([40000, 65000, 120000, 150000, 200000])
+bonuses = Array[int]([500, 550, 600, 650, 700])
 metadata/_custom_type_script = "uid://dm27dal87tjxq"

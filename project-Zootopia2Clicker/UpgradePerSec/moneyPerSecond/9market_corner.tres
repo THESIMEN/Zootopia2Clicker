@@ -6,6 +6,6 @@
 script = ExtResource("1_0ofc7")
 id = "mps9"
 title_key = "market_corner"
-prices = Array[int]([400000, 460000, 520000, 580000, 640000])
-bonuses = Array[int]([100, 100, 100, 100, 100])
+prices = Array[int]([1750000, 2000000, 2250000, 2500000, 2750000])
+bonuses = Array[int]([3000, 3500, 4000, 4500, 5000])
 metadata/_custom_type_script = "uid://dm27dal87tjxq"

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cou2d8hv2dpjy"
-path="res://.godot/imported/SakuraBG.png-8f04b85d12e47557d25ad9fe88c59411.ctex"
+uid="uid://soxlspe88bne"
+path="res://.godot/imported/спрунки3.png-cf44dea2896f8dd12cd6f66fa9182bed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Background/SakuraBG.png"
-dest_files=["res://.godot/imported/SakuraBG.png-8f04b85d12e47557d25ad9fe88c59411.ctex"]
+source_file="res://Assets/Sprunki/спрунки3.png"
+dest_files=["res://.godot/imported/спрунки3.png-cf44dea2896f8dd12cd6f66fa9182bed.ctex"]
 
 [params]
 

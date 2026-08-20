@@ -6,7 +6,7 @@
 script = ExtResource("1_nc4xj")
 id = "mpc4"
 title_key = "trigger_upgrade"
-prices = Array[int]([5000, 7500, 10000, 12500, 15000])
-bonuses = Array[int]([15, 15, 15, 15, 15])
+prices = Array[int]([5000, 20000, 35000, 50000, 75000])
+bonuses = Array[int]([45, 50, 55, 60, 65])
 is_per_second = false
 metadata/_custom_type_script = "uid://dm27dal87tjxq"

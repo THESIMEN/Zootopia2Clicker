@@ -6,6 +6,6 @@
 script = ExtResource("1_vfnem")
 id = "mps8"
 title_key = "trading_post"
-prices = Array[int]([230000, 260000, 290000, 320000, 350000])
-bonuses = Array[int]([75, 75, 75, 75, 75])
+prices = Array[int]([500000, 750000, 1000000, 1250000, 1500000])
+bonuses = Array[int]([1600, 1750, 2000, 2250, 2500])
 metadata/_custom_type_script = "uid://dm27dal87tjxq"

@@ -6,7 +6,7 @@
 script = ExtResource("1_rpis4")
 id = "mpc8"
 title_key = "burst_module"
-prices = Array[int]([800000, 1000000, 1250000, 1500000, 1750000])
-bonuses = Array[int]([150, 200, 250, 300, 350])
+prices = Array[int]([500000, 600000, 700000, 800000, 900000])
+bonuses = Array[int]([375, 400, 500, 600, 700])
 is_per_second = false
 metadata/_custom_type_script = "uid://dm27dal87tjxq"

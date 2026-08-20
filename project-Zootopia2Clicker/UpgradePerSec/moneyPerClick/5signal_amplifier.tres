@@ -6,7 +6,7 @@
 script = ExtResource("1_6h1j5")
 id = "mpc5"
 title_key = "signal_amplifier"
-prices = Array[int]([20000, 25000, 30000, 35000, 40000])
-bonuses = Array[int]([20, 20, 20, 20, 20])
+prices = Array[int]([125000, 150000, 175000, 200000, 225000])
+bonuses = Array[int]([75, 85, 95, 105, 115])
 is_per_second = false
 metadata/_custom_type_script = "uid://dm27dal87tjxq"

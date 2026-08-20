@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://75r7xnr1oaer" path="res://Assets/Texture/5Star.png" id="10_8tx1l"]
 
 [node name="UpgradeCell" type="Control" unique_id=373654949]
-custom_minimum_size = Vector2(0, 80)
+custom_minimum_size = Vector2(0, 120)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -19,7 +19,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
-mouse_filter = 1
+mouse_filter = 2
 script = ExtResource("1_wth74")
 
 [node name="TextureButton" type="TextureButton" parent="." unique_id=792871201]
@@ -31,70 +31,70 @@ texture_normal = ExtResource("2_hauuu")
 
 [node name="LabelTitle" type="Label" parent="TextureButton" unique_id=1764793200]
 layout_mode = 0
-offset_left = 9.0
-offset_top = 4.0
-offset_right = 198.0
-offset_bottom = 38.0
+offset_left = 12.0
+offset_top = 9.0
+offset_right = 201.0
+offset_bottom = 43.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 7
 theme_override_fonts/font = ExtResource("3_i06xt")
-theme_override_font_sizes/font_size = 18
+theme_override_font_sizes/font_size = 27
 text = "name"
 
 [node name="LabelPrice" type="Label" parent="TextureButton" unique_id=1880895780]
 layout_mode = 0
-offset_left = 162.0
-offset_top = 40.0
-offset_right = 331.0
-offset_bottom = 74.0
+offset_left = 268.0
+offset_top = 77.0
+offset_right = 498.0
+offset_bottom = 111.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 7
 theme_override_fonts/font = ExtResource("3_i06xt")
-theme_override_font_sizes/font_size = 18
+theme_override_font_sizes/font_size = 27
 text = "price"
 horizontal_alignment = 2
 vertical_alignment = 2
 
 [node name="LabelBonus" type="Label" parent="TextureButton" unique_id=1629895198]
 layout_mode = 0
-offset_left = 9.0
-offset_top = 46.0
-offset_right = 128.0
-offset_bottom = 75.0
+offset_left = 13.0
+offset_top = 81.0
+offset_right = 132.0
+offset_bottom = 112.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 7
 theme_override_fonts/font = ExtResource("3_i06xt")
-theme_override_font_sizes/font_size = 18
+theme_override_font_sizes/font_size = 27
 text = "mps"
 vertical_alignment = 2
 
 [node name="Stars" type="Node2D" parent="TextureButton" unique_id=996355194]
 
 [node name="Star0" type="Sprite2D" parent="TextureButton/Stars" unique_id=792958588]
-position = Vector2(268, 19)
+position = Vector2(435, 22)
 texture = ExtResource("5_0a1qr")
 
 [node name="Star1" type="Sprite2D" parent="TextureButton/Stars" unique_id=702823132]
 visible = false
-position = Vector2(268, 19)
+position = Vector2(435, 22)
 texture = ExtResource("6_cpyst")
 
 [node name="Star2" type="Sprite2D" parent="TextureButton/Stars" unique_id=400346821]
 visible = false
-position = Vector2(268, 19)
+position = Vector2(435, 22)
 texture = ExtResource("7_adgeu")
 
 [node name="Star3" type="Sprite2D" parent="TextureButton/Stars" unique_id=243141522]
 visible = false
-position = Vector2(268, 19)
+position = Vector2(435, 22)
 texture = ExtResource("8_175cq")
 
 [node name="Star4" type="Sprite2D" parent="TextureButton/Stars" unique_id=506434089]
 visible = false
-position = Vector2(268, 19)
+position = Vector2(435, 22)
 texture = ExtResource("9_olqy8")
 
 [node name="Star5" type="Sprite2D" parent="TextureButton/Stars" unique_id=1718218932]
 visible = false
-position = Vector2(268, 19)
+position = Vector2(435, 22)
 texture = ExtResource("10_8tx1l")

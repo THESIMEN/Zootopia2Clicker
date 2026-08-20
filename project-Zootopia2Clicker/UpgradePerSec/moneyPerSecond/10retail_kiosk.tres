@@ -6,6 +6,6 @@
 script = ExtResource("1_iso0m")
 id = "mps10"
 title_key = "retail_kiosk"
-prices = Array[int]([700000, 750000, 800000, 850000, 900000])
-bonuses = Array[int]([250, 250, 250, 250, 250])
+prices = Array[int]([3000000, 3500000, 4000000, 4500000, 5000000])
+bonuses = Array[int]([5500, 6195, 7500, 8500, 10000])
 metadata/_custom_type_script = "uid://dm27dal87tjxq"

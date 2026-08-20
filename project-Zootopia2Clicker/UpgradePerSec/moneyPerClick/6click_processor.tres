@@ -6,7 +6,7 @@
 script = ExtResource("1_e8yl5")
 id = "mpc6"
 title_key = "click_processor"
-prices = Array[int]([50000, 75000, 100000, 125000, 150000])
-bonuses = Array[int]([25, 25, 25, 25, 25])
+prices = Array[int]([250000, 275000, 300000, 325000, 350000])
+bonuses = Array[int]([130, 150, 170, 190, 210])
 is_per_second = false
 metadata/_custom_type_script = "uid://dm27dal87tjxq"

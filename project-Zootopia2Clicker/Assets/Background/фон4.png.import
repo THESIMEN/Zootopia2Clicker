@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bb5say1i23odl"
-path="res://.godot/imported/BrownSprunki.png-2edc99c1d9eb34f9fb458925189377f1.ctex"
+uid="uid://clu61yglucq23"
+path="res://.godot/imported/фон4.png-d14d2ebebd28b30a1f38021b20e142f7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ButtonClick/BrownSprunki.png"
-dest_files=["res://.godot/imported/BrownSprunki.png-2edc99c1d9eb34f9fb458925189377f1.ctex"]
+source_file="res://Assets/Background/фон4.png"
+dest_files=["res://.godot/imported/фон4.png-d14d2ebebd28b30a1f38021b20e142f7.ctex"]
 
 [params]
 

@@ -1,34 +1,35 @@
 keys,en,ru
 money,Coins: {amount},Монетки: {amount}
 mps,{value}/sec,{value}/сек
-shop,Toy Shop,Лавка игрушек
+shop,Business,Бизнес
 coins_click,Coins per Tap,Монеты за тап
 coins_sec,Coins Factory,Фабрика монет
 ad_double_click,x2 Super Taps (30s) Watch Ads,x2 Супер-тапы (30сек) Смотреть рекламу
 ad_double_click_active,x2 Super Taps ({time}s),x2 Супер-тапы ({time}с)
 
-street_stand,Lemonade Box,Лимонадная коробка
-small_shop,Candy Shop,Конфетная лавка
-market_stall,Snack Stand,Лавка вкусняшек
-trading_booth,Toy Booth,Игрушечная будка
-local_vendor,Happy Seller,Веселый продавец
-mini_market,Mini Fun Mart,Мини-маркет веселья
-supply_stand,Snack Supply,Склад вкусняшек
-trading_post,Fun Trading Post,Пост обмена веселья
-market_corner,Cookie Corner,Уголок печенек
-retail_kiosk,Super Toy Kiosk,Супер киоск игрушек
+street_stand,Lemonade Stand,Ларек с лимонадом
+small_shop,Small Shop,Небольшой магазин
+market_stall,Market Stall,Торговая лавка
+trading_booth,Toy Store,Магазин игрушек
+local_vendor,Local Business,Местный бизнес
+mini_market,Mini Market,Мини-маркет
+supply_stand,Established Business,Стабильный бизнес
+trading_post,Large Business,Крупный бизнес
+market_corner,Successful Business,Успешный бизнес
+retail_kiosk,Millionaire,Миллионер
 
-click_core,Magic Finger,Волшебный пальчик
-input_boost,Turbo Tapper,Турбо-тапер
-reaction_module,Bouncy Button,Прыгучая кнопка
-trigger_upgrade,BOOM Trigger,Бум-триггер
-signal_amplifier,Mega Booster,Мега-усилитель
-click_processor,Tap Machine,Машина тапов
-latency_reducer,Speed Candy,Конфета скорости
-burst_module,Spark Burst,Искровой взрыв
-precision_driver,Laser Finger,Лазерный пальчик
-quantum_click,Galaxy Tap,Галактический тап
+click_core,Power Tap,Сильный тап
+input_boost,Turbo Tap,Турбо-тап
+reaction_module,Quick Trigger,Быстрый триггер
+trigger_upgrade,Power Trigger,Усиленный триггер
+signal_amplifier,Mega Booster,Мега-бустер
+click_processor,Click Machine,Машина кликов
+latency_reducer,Quick Response,Быстрый отклик
+burst_module,Power Burst,Мощный импульс
+precision_driver,Precision Tap,Точный тап
+quantum_click,Quantum Tap,Квантовый тап
 
 price,Cost: {price},Цена: {price}
 plus_sec,+{value} sec,+{value} сек
 plus_click,+{value} click,+{value} клик
+level,Level {level},Уровень {level}

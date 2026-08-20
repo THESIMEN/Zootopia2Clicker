@@ -1,11 +1,14 @@
 [gd_scene format=3 uid="uid://d1wigo34absfm"]
 
 [ext_resource type="Script" uid="uid://di4emqfi2egv4" path="res://Script/Game.gd" id="1_mopgc"]
-[ext_resource type="Texture2D" uid="uid://b5jqj3s8f16n1" path="res://Assets/Background/Bg.png" id="2_xto0v"]
-[ext_resource type="Texture2D" uid="uid://bb5say1i23odl" path="res://Assets/ButtonClick/BrownSprunki.png" id="3_dxek2"]
+[ext_resource type="Texture2D" uid="uid://ck07uuxgrktno" path="res://Assets/Background/фон1.png" id="2_kw2qm"]
+[ext_resource type="Texture2D" uid="uid://bb5say1i23odl" path="res://Assets/Sprunki/спрунки1.png" id="3_dxek2"]
 [ext_resource type="Texture2D" uid="uid://dd183xsqhm01k" path="res://Assets/Texture/ShopBG.png" id="5_3xgnh"]
 [ext_resource type="Texture2D" uid="uid://dokk6s7fqmdh4" path="res://Assets/Texture/ShopOpenButton1Normal.png" id="5_bxrg2"]
+[ext_resource type="Texture2D" uid="uid://giktgg5s51w" path="res://Assets/Texture/UnderTextureProgressBar.png" id="5_kw2qm"]
 [ext_resource type="Texture2D" uid="uid://7mjtwpr44l8f" path="res://Assets/Texture/ShopOpenButton2Pressed.png" id="6_ilbig"]
+[ext_resource type="Texture2D" uid="uid://cbup534hgfkpo" path="res://Assets/Texture/OverTextureProgressBar.png" id="6_lymyl"]
+[ext_resource type="Texture2D" uid="uid://dpid1sf5kh5x2" path="res://Assets/Texture/ProgressTextureProgressBar.png" id="7_06386"]
 [ext_resource type="Texture2D" uid="uid://tuiiju4u1k42" path="res://Assets/Texture/ShopOpenButton3Hover.png" id="7_kfjtm"]
 [ext_resource type="Texture2D" uid="uid://b8aemptc66hdm" path="res://Assets/Texture/rope.png" id="8_eg5pg"]
 [ext_resource type="Texture2D" uid="uid://ccnk2ixd5dqjp" path="res://Assets/Texture/MoneyPerClickButton2Pressed.png" id="9_aawhf"]
@@ -53,7 +56,7 @@ script = ExtResource("1_mopgc")
 layer = -5
 
 [node name="BG" type="Sprite2D" parent="UI" unique_id=396314534]
-texture = ExtResource("2_xto0v")
+texture = ExtResource("2_kw2qm")
 centered = false
 
 [node name="Version" type="Label" parent="UI" unique_id=1586659523]
@@ -65,7 +68,7 @@ offset_top = -31.0
 offset_right = 68.0
 offset_bottom = -8.0
 grow_vertical = 0
-text = "V0.1"
+text = "V0.1.2"
 
 [node name="Control" type="Control" parent="." unique_id=1392138981]
 layout_mode = 3
@@ -80,10 +83,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -220.5
-offset_top = -670.0
-offset_right = 220.5
-offset_bottom = -208.0
+offset_left = -201.0
+offset_top = -591.0
+offset_right = 240.0
+offset_bottom = -129.0
 grow_horizontal = 2
 grow_vertical = 0
 texture_normal = ExtResource("3_dxek2")
@@ -100,7 +103,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("9_ilbig")
-theme_override_font_sizes/font_size = 70
+theme_override_font_sizes/font_size = 105
 text = "money"
 horizontal_alignment = 1
 
@@ -108,190 +111,52 @@ horizontal_alignment = 1
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_top = 96.011
-offset_bottom = 131.011
+offset_top = 121.011
+offset_bottom = 166.011
 grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("9_ilbig")
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 38
 text = "mps"
 horizontal_alignment = 1
+
+[node name="LevelProgress" type="TextureProgressBar" parent="Control" unique_id=440713979]
+layout_mode = 0
+offset_left = 686.0
+offset_top = 933.0
+offset_right = 1186.0
+offset_bottom = 1023.0
+value = 100.0
+texture_under = ExtResource("5_kw2qm")
+texture_over = ExtResource("6_lymyl")
+texture_progress = ExtResource("7_06386")
+
+[node name="LevelLabel" type="Label" parent="Control" unique_id=1902064225]
+layout_mode = 0
+offset_left = 872.0
+offset_top = 958.0
+offset_right = 1014.0
+offset_bottom = 996.0
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("9_ilbig")
+theme_override_font_sizes/font_size = 32
+text = "LevelLabel"
 
 [node name="ShopButton" type="TextureButton" parent="Control" unique_id=1412780035]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -130.0
-offset_top = 74.0
-offset_right = -10.0
-offset_bottom = 194.0
+offset_left = -214.0
+offset_top = 50.0
+offset_right = -34.0
+offset_bottom = 230.0
 grow_horizontal = 0
 texture_normal = ExtResource("5_bxrg2")
 texture_pressed = ExtResource("6_ilbig")
 texture_hover = ExtResource("7_kfjtm")
-
-[node name="MenuShop" type="MenuBar" parent="Control" unique_id=387568935]
-visible = false
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -360.0
-offset_top = 74.0
-offset_right = -10.0
-offset_bottom = 774.0
-grow_horizontal = 0
-
-[node name="SpriteRope1" type="Sprite2D" parent="Control/MenuShop" unique_id=1999903170]
-position = Vector2(50.999996, -50.999996)
-rotation = 1.5707964
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("8_eg5pg")
-
-[node name="SpriteRope2" type="Sprite2D" parent="Control/MenuShop" unique_id=2021070504]
-position = Vector2(301.99997, -50.999996)
-rotation = 1.5707964
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("8_eg5pg")
-
-[node name="ShopBG" type="Sprite2D" parent="Control/MenuShop" unique_id=1828709325]
-texture = ExtResource("5_3xgnh")
-centered = false
-
-[node name="LabelShop" type="Label" parent="Control/MenuShop" unique_id=7636782]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 55.0
-grow_horizontal = 2
-theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("9_ilbig")
-theme_override_font_sizes/font_size = 32
-text = "shop"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Box" type="HBoxContainer" parent="Control/MenuShop" unique_id=195122736]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_top = 60.0
-offset_bottom = 120.0
-grow_horizontal = 2
-alignment = 1
-
-[node name="MoneyPerClickButton" type="TextureButton" parent="Control/MenuShop/Box" unique_id=2034315892]
-layout_mode = 2
-size_flags_horizontal = 4
-texture_normal = ExtResource("11_nspe4")
-texture_pressed = ExtResource("9_aawhf")
-stretch_mode = 3
-
-[node name="Label" type="Label" parent="Control/MenuShop/Box/MoneyPerClickButton" unique_id=415245592]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -50.0
-offset_top = -12.5
-offset_right = 50.0
-offset_bottom = 12.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/outline_size = 6
-theme_override_fonts/font = ExtResource("9_ilbig")
-theme_override_font_sizes/font_size = 21
-text = "coins_click"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="MoneyPerSecondButton" type="TextureButton" parent="Control/MenuShop/Box" unique_id=176004019]
-layout_mode = 2
-texture_normal = ExtResource("12_aawhf")
-texture_pressed = ExtResource("11_kcbv6")
-stretch_mode = 3
-
-[node name="Label" type="Label" parent="Control/MenuShop/Box/MoneyPerSecondButton" unique_id=1322994062]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -44.0
-offset_top = -12.5
-offset_right = 44.0
-offset_bottom = 12.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/outline_size = 6
-theme_override_fonts/font = ExtResource("9_ilbig")
-theme_override_font_sizes/font_size = 21
-text = "coins_sec"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="CloseShopButton" type="TextureButton" parent="Control/MenuShop" unique_id=1355947816]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -55.00006
-offset_top = -5.0
-offset_right = 5.0
-offset_bottom = 55.000015
-grow_horizontal = 0
-pivot_offset = Vector2(30, 30)
-texture_normal = ExtResource("13_bxrg2")
-texture_pressed = ExtResource("14_ilbig")
-texture_hover = ExtResource("15_kfjtm")
-stretch_mode = 3
-
-[node name="ShopPerClick" parent="Control/MenuShop" unique_id=1052380625 instance=ExtResource("15_bxrg2")]
-position = Vector2(5, 125)
-upgrades = Array[ExtResource("19_1mx4w")]([ExtResource("19_65ldo"), ExtResource("20_dxek2"), ExtResource("21_30sih"), ExtResource("22_xto0v"), ExtResource("23_eg5pg"), ExtResource("24_47blv"), ExtResource("25_a7j53"), ExtResource("26_1dunb"), ExtResource("27_jjbbk"), ExtResource("28_qugof")])
-
-[node name="ShopPerSecond" parent="Control/MenuShop" unique_id=2138634963 instance=ExtResource("11_g3fkh")]
-visible = false
-position = Vector2(5, 125)
-upgrades = Array[ExtResource("19_1mx4w")]([ExtResource("20_65ldo"), ExtResource("21_0yiub"), ExtResource("22_10r1t"), ExtResource("23_vmjmr"), ExtResource("24_yl8rb"), ExtResource("25_fm120"), ExtResource("26_sq4tt"), ExtResource("27_ct3sx"), ExtResource("28_tridy"), ExtResource("29_dxek2")])
-
-[node name="AdButton" type="TextureButton" parent="Control" unique_id=141267004]
-layout_mode = 0
-offset_left = 33.0
-offset_top = 300.0
-offset_right = 206.0
-offset_bottom = 473.0
-texture_normal = ExtResource("40_30sih")
-texture_disabled = ExtResource("40_eg5pg")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="LabelAd" type="Label" parent="Control/AdButton" unique_id=1759965501]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -105.28125
-offset_top = -5.654419
-offset_right = 105.28125
-offset_bottom = 64.000015
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_constants/outline_size = 6
-theme_override_fonts/font = ExtResource("9_ilbig")
-theme_override_font_sizes/font_size = 24
-text = "ad_double_click"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
 
 [node name="Volume" type="HSlider" parent="Control" unique_id=813152161]
 layout_mode = 1
@@ -319,6 +184,168 @@ position = Vector2(-32.999977, 35.999973)
 scale = Vector2(0.11035167, 0.11035167)
 texture = ExtResource("43_jjbbk")
 
+[node name="MenuShop" type="MenuBar" parent="Control" unique_id=387568935]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -541.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = 1066.0
+grow_horizontal = 0
+
+[node name="SpriteRope1" type="Sprite2D" parent="Control/MenuShop" unique_id=1999903170]
+position = Vector2(50.999996, -50.999996)
+rotation = 1.5707964
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("8_eg5pg")
+
+[node name="SpriteRope2" type="Sprite2D" parent="Control/MenuShop" unique_id=2021070504]
+position = Vector2(470, -51)
+rotation = 1.5707964
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("8_eg5pg")
+
+[node name="ShopBG" type="Sprite2D" parent="Control/MenuShop" unique_id=1828709325]
+texture = ExtResource("5_3xgnh")
+centered = false
+
+[node name="LabelShop" type="Label" parent="Control/MenuShop" unique_id=7636782]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 11.0
+offset_bottom = 67.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("9_ilbig")
+theme_override_font_sizes/font_size = 48
+text = "shop"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Box" type="HBoxContainer" parent="Control/MenuShop" unique_id=195122736]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 92.0
+offset_bottom = 182.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="MoneyPerClickButton" type="TextureButton" parent="Control/MenuShop/Box" unique_id=2034315892]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("11_nspe4")
+texture_pressed = ExtResource("9_aawhf")
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="Control/MenuShop/Box/MoneyPerClickButton" unique_id=415245592]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -12.5
+offset_right = 50.0
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("9_ilbig")
+theme_override_font_sizes/font_size = 32
+text = "coins_click"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MoneyPerSecondButton" type="TextureButton" parent="Control/MenuShop/Box" unique_id=176004019]
+layout_mode = 2
+texture_normal = ExtResource("12_aawhf")
+texture_pressed = ExtResource("11_kcbv6")
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="Control/MenuShop/Box/MoneyPerSecondButton" unique_id=1322994062]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -12.5
+offset_right = 44.0
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("9_ilbig")
+theme_override_font_sizes/font_size = 32
+text = "coins_sec"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloseShopButton" type="TextureButton" parent="Control/MenuShop" unique_id=1355947816]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -55.00006
+offset_top = -5.0
+offset_right = 5.0
+offset_bottom = 55.000015
+grow_horizontal = 0
+pivot_offset = Vector2(30, 30)
+texture_normal = ExtResource("13_bxrg2")
+texture_pressed = ExtResource("14_ilbig")
+texture_hover = ExtResource("15_kfjtm")
+stretch_mode = 3
+
+[node name="ShopPerClick" parent="Control/MenuShop" unique_id=1052380625 instance=ExtResource("15_bxrg2")]
+position = Vector2(8, 188)
+upgrades = Array[ExtResource("19_1mx4w")]([ExtResource("19_65ldo"), ExtResource("20_dxek2"), ExtResource("21_30sih"), ExtResource("22_xto0v"), ExtResource("23_eg5pg"), ExtResource("24_47blv"), ExtResource("25_a7j53"), ExtResource("26_1dunb"), ExtResource("27_jjbbk"), ExtResource("28_qugof")])
+
+[node name="ShopPerSecond" parent="Control/MenuShop" unique_id=2138634963 instance=ExtResource("11_g3fkh")]
+visible = false
+position = Vector2(8, 188)
+upgrades = Array[ExtResource("19_1mx4w")]([ExtResource("20_65ldo"), ExtResource("21_0yiub"), ExtResource("22_10r1t"), ExtResource("23_vmjmr"), ExtResource("24_yl8rb"), ExtResource("25_fm120"), ExtResource("26_sq4tt"), ExtResource("27_ct3sx"), ExtResource("28_tridy"), ExtResource("29_dxek2")])
+
+[node name="AdButton" type="TextureButton" parent="Control" unique_id=141267004]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 300.0
+offset_right = 254.0
+offset_bottom = 473.0
+texture_normal = ExtResource("40_30sih")
+texture_disabled = ExtResource("40_eg5pg")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="LabelAd" type="Label" parent="Control/AdButton" unique_id=1759965501]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -156.39063
+offset_top = 24.531433
+offset_right = 156.39063
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("9_ilbig")
+theme_override_font_sizes/font_size = 36
+text = "ad_double_click"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
 [node name="Timer" type="Timer" parent="." unique_id=372078229]
 autostart = true
 
@@ -331,9 +358,9 @@ stream = ExtResource("43_47blv")
 
 [connection signal="pressed" from="Control/ClickerButton" to="." method="_on_clicker_button_pressed"]
 [connection signal="pressed" from="Control/ShopButton" to="." method="_on_shop_button_pressed"]
+[connection signal="value_changed" from="Control/Volume" to="." method="_on_volume_value_changed"]
 [connection signal="pressed" from="Control/MenuShop/Box/MoneyPerClickButton" to="." method="_on_money_per_click_button_pressed"]
 [connection signal="pressed" from="Control/MenuShop/Box/MoneyPerSecondButton" to="." method="_on_money_per_second_button_pressed"]
 [connection signal="pressed" from="Control/MenuShop/CloseShopButton" to="." method="_on_close_shop_button_pressed"]
 [connection signal="pressed" from="Control/AdButton" to="." method="_on_ad_button_pressed"]
-[connection signal="value_changed" from="Control/Volume" to="." method="_on_volume_value_changed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

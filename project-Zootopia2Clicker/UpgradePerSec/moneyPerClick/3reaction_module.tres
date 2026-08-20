@@ -7,6 +7,6 @@ script = ExtResource("1_cxcd0")
 id = "mpc3"
 title_key = "reaction_module"
 prices = Array[int]([1500, 2000, 2500, 3000, 3500])
-bonuses = Array[int]([10, 10, 10, 10, 10])
+bonuses = Array[int]([20, 25, 30, 35, 40])
 is_per_second = false
 metadata/_custom_type_script = "uid://dm27dal87tjxq"
